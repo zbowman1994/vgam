@@ -23,7 +23,6 @@ function storeName($firstName, $lastName)
 
 }
 
-
 /**
  * This function generates the result set of
  * the tblNames table.
@@ -43,4 +42,83 @@ function getAllNames()
 
 }
 
+/*
+ * This function generates result set of the 
+ * products table
+*/
+function getAllProducts()
+{
+	
+	global $dbc;
+	
+	$query = 'SELECT * from products';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $products = $statement->fetchAll();
+    $statement->closeCursor();
+	
+    return $products;
+}
+
+/*
+ * This function generates result set of the 
+ * wii games
+*/
+function getAllWiiGames()
+{
+	
+	global $dbc;
+	
+	$query = 'SELECT * from products where categories_cat_id = 1';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $wiiGames = $statement->fetchAll();
+    $statement->closeCursor();
+	
+    return $wiiGames;
+}
+
+/*
+ * This function generates result set of the 
+ * playstation games
+*/
+function getAllPlaystationGames()
+{
+	
+	global $dbc;
+	
+	$query = 'SELECT * from products where categories_cat_id = 2';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $playstationGames = $statement->fetchAll();
+    $statement->closeCursor();
+	
+    return $playstationGames;
+}
+
+/*
+ * This function generates result set of the 
+ * misc items
+*/
+function getAllMiscItems()
+{
+	
+	global $dbc;
+	
+	$query = 'SELECT * from products where categories_cat_id = 3';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $miscItems = $statement->fetchAll();
+    $statement->closeCursor();
+	
+    return $miscItems;
+}
+
+/*
+ * This function will add products to the cart
+ */
+ function addProduct() {
+	
+	
+ }
 ?>
