@@ -1,5 +1,12 @@
-    <!-- END SPECIFIC PAGE CONTENT -->
-    </div> <!-- end container row -->
+<link rel="stylesheet" type ="text/css" href="css/style.css" >     
+
+
+
+<!-- END SPECIFIC PAGE CONTENT -->
+    </div> <!-- end container row --
+                                                    
+
+     
     <p class="copyright">&copy; <?php echo date("Y"); ?> Camosun College</p>
 </div> <!-- end container -->
 <!-- The below two script entries load JavaScript into the page. Bootstrap requires both its own
