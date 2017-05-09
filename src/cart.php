@@ -13,10 +13,11 @@
     <table class="table table-bordered table-striped" id="names">
         <thead>
             <tr>
+                <th scope="col">Product ID</th>
                 <th scope="col">Product Name</th>
 				<th scope="col">Product Price</th>
 				<th scope="col">Quantity</th>
-				<th scope="col">Add/Remove product</th>
+				<th scope="col">Remove product</th>
             </tr>
         </thead>
         <tbody>
@@ -26,11 +27,11 @@
 		    <!-- need to update for cart instead of listing all the products again -->
 			
             <tr>
-                <td><?php echo $_POST['product_name']; ?></td>
+                <td><?php echo $_POST['product_id']; ?></td>
+				<td><?php echo $_POST['product_name']; ?></td>
 				<td>$<?php echo $_POST['product_price']; ?></td>
-							 <?php echo $_POST['product_id']; ?>
 				
-				<button type="submit">Remove</button></td>
+				<td><button type="submit">Remove</button></td>
             </tr>
             
         </tbody>
