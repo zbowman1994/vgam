@@ -125,7 +125,7 @@ function getAllMiscItems()
     $query = 'INSERT INTO cart (products_product_id, quantity, time) 
 	values (:id, :quantity, NOW())';
     $statement = $dbc->prepare($query);
-    $statement->bindValue(':id', $id);
+    $statement->bindValue(':idp', $idp);
     $statement->bindValue(':quantity', $quantity);
     $statement->execute();
     $statement->closeCursor();

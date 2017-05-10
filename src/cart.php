@@ -3,12 +3,12 @@
     
     require_once 'model/db_connect.php';
     require_once 'model/db_functions.php';
-	$id = $_POST['product_id'];
+	$idp = $_POST['product_id'];
 	$name = $_POST['product_name'];
 	$price = $_POST['product_price'];
 	$quantity = $_POST['quantity'];
 	
-	$addToCart = addProduct($id,$quantity);
+	$addToCart = addProduct($idp,$quantity);
 	$cart = getCart();
 	
 	?>
