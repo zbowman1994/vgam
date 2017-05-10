@@ -118,7 +118,7 @@ function getAllMiscItems()
  * This function will add product id quantity and a timestamp to the cart
  * this is to be used in get cart to query db and return the items for display
  */
- function addProduct($id, $quantity) {
+ function addProduct($idp, $quantity) {
 	
 	global $dbc;
     
@@ -150,5 +150,28 @@ function getCart()
 	
     return $cart;
 }
+
+/*
+ * This function deletes cart
+ */
+ function clearCart() {
+	
+	global $dbc;
+    
+    $query = 'TRUNCATE TABLE cart';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $statement->closeCursor();
+	
+ }
+ 
+ function removeProduct() {
+	 global $dbc;
+	 
+	 $query = ' DELETE * FROM cart WHERE product_id = $id';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $statement->closeCursor();
+ }
 
 ?>

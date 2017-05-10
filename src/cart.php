@@ -12,8 +12,8 @@
 	$cart = getCart();
 	
 	?>
-<button type="button">Empty Cart</button>
-<button type="button"><a href = "index.php">Continue shopping</a></button>
+
+<button type="button"><a href = "productSelection.php">Continue shopping</a></button>
 <button type="button">Checkout</button>
     <table class="table table-bordered table-striped" id="names">
         <thead>
@@ -22,13 +22,12 @@
 				<th scope="col">name</th>
                 <th scope="col">price</th>
 				<th scope="col">quantity</th>
+				<button type="button" >Empty Cart</button>
             </tr>
         </thead>
         <tbody>
             <!-- use foreach loop to fetch contents of each row -->
-		   
-            
-				
+		   	
              <?php foreach ($cart as $item) { ?>
 			   <tr>
 				<td><?php echo $item['product_id']; ?></td>
