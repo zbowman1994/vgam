@@ -72,32 +72,46 @@ caption {
     font-size: 24px;
 }
 button#contactus {
-    border: 1px black solid;
+    border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
     
 }
 button#main {
     
-    border: 1px black solid;
+    border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
     
 }
 button#products {
    
-    border: 1px black solid;
+    border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
     
 }
 button#login {
-    border: 1px black solid;
+    border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
 }
-a {
-    text-decoration: none;
+button#allproducts {
+   
+    border: 2px black solid;
+    padding: 20px 125px;
+    background-color: white;
+    width: 1000px;
+    height: 150px;
+    font-size: 20px;
+    
+}
+
+button#wiigames {
+    border: 2px black solid;
+    padding: 20px 125px;
+    background-color: white;
+    
 }
 
 input[type=text], select, textarea {
@@ -130,6 +144,8 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
+a {
+    text-decoration: none;
+}
 
 
- 
