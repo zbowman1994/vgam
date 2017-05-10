@@ -123,7 +123,7 @@ function getAllMiscItems()
 	global $dbc;
     
     $query = 'INSERT INTO cart (products_product_id, quantity, time) 
-	values (:id, :quantity, NOW())';
+	values (:idp, :quantity, NOW())';
     $statement = $dbc->prepare($query);
     $statement->bindValue(':idp', $idp);
     $statement->bindValue(':quantity', $quantity);
