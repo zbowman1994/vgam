@@ -115,10 +115,40 @@ function getAllMiscItems()
 }
 
 /*
- * This function will add products to the cart
+ * This function will add product id quantity and a timestamp to the cart
+ * this is to be used in get cart to query db and return the items for display
  */
- function addProduct() {
+ function addProduct($id, $quantity) {
 	
+	global $dbc;
+    
+    $query = 'INSERT INTO cart (products_product_id, quantity, time) 
+	values (:id, :quantity, NOW())';
+    $statement = $dbc->prepare($query);
+    $statement->bindValue(':id', $id);
+    $statement->bindValue(':quantity', $quantity);
+    $statement->execute();
+    $statement->closeCursor();
 	
  }
+ 
+ /*
+ * This function generates result set of the 
+ * product in the shopping cart and returns them
+*/
+function getCart()
+{
+	
+	global $dbc;
+	
+	$query = 'SELECT product_id, product_name, product_price, quantity from products
+	INNER JOIN cart ON products.product_id = cart.products_product_id';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $cart = $statement->fetchAll();
+    $statement->closeCursor();
+	
+    return $cart;
+}
+
 ?>

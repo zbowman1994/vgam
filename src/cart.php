@@ -8,7 +8,8 @@
 	$price = $_POST['product_price'];
 	$quantity = $_POST['quantity'];
 	
-	$addToCart = addProduct($id, $name, $price, $quantity);
+	$addToCart = addProduct($id,$quantity);
+	$cart = getCart();
 	
 	?>
 <button type="button">Empty Cart</button>
@@ -17,28 +18,26 @@
     <table class="table table-bordered table-striped" id="names">
         <thead>
             <tr>
-
-                <th scope="col">Product ID</th>
-
-                <th scope="col">Product Name</th>
-				<th scope="col">Product Price</th>
-				<th scope="col">Quantity</th>
-				<th scope="col">Remove product</th>
+                <th scope="col">product id</th>
+				<th scope="col">name</th>
+                <th scope="col">price</th>
+				<th scope="col">quantity</th>
             </tr>
         </thead>
         <tbody>
             <!-- use foreach loop to fetch contents of each row -->
-		   <?php echo $_POSt['product_id']; ?>
-
-		    <!-- need to update for cart instead of listing all the products again -->
-			
-            <tr>
-                <td><?php echo $id ?></td>
-				<td><?php echo $name; ?></td>
-				<td>$<?php echo $price; ?></td>
-				<td><?php echo $quantity; ?></td>
-				<td><button type="submit">Remove</button></td>
-            </tr>
+		   
             
-        </tbody>
+				
+             <?php foreach ($cart as $item) { ?>
+			   <tr>
+				<td><?php echo $item['product_id']; ?></td>
+                <td><?php echo $item['product_name']; ?></td>
+				<td><?php echo $item['product_price']; ?></td>
+				<td><?php echo $item['quantity']; ?></td>
+				<td><button type="submit">Remove</button></td>
+			 </tr>
+			 <?php } ?>
+        
+		</tbody>
     </table>
