@@ -14,7 +14,7 @@ function storeName($firstName, $lastName)
     global $dbc;
     
     $query = 'INSERT INTO tblNames (first_name, last_name) 
-        VALUES (:firstName, :lastName)';
+			  VALUES (:firstName, :lastName)';
     $statement = $dbc->prepare($query);
     $statement->bindValue(':firstName', $firstName);
     $statement->bindValue(':lastName', $lastName);

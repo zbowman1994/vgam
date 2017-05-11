@@ -30,16 +30,17 @@
         <tbody>
             <!-- use foreach loop to fetch contents of each row -->
             <?php foreach ($products as $product) { ?>
-			
+			<form action="cart.php" method="post">
+			<input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
             <tr>
 				<td><img src = "<?php echo $product['product_image']; ?>" height = "42" width = "42"></img></td>
                 <td><?php echo $product['product_name']; ?></td>
                 <td><?php echo $product['product_description']; ?></td>
 				<td>$<?php echo $product['product_price']; ?></td>
-				<td><form><input type="text" value="1"></form></td>				
-				<td><button type="button">Add</button>
-				<button type="button">Remove (TO-DO: add Remove function)</button></td>
-            </tr>
+				<td><input type="number" name="quantity" value="quantity" placeholder="1" width="15"></td>				
+				<td><button type="submit">Add</button>
+				</tr>
+				</form>
             <?php } ?>
         </tbody>
     </table>
