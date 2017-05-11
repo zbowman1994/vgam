@@ -164,11 +164,13 @@ function getCart()
     $statement->closeCursor();
 	
  }
- 
- function removeProduct() {
+ /*
+  * removes the selected product from the cart
+  */
+ function removeProduct($idc) {
 	 global $dbc;
 	 
-	 $query = ' DELETE * FROM cart WHERE product_id = $id';
+	 $query = ' DELETE * FROM cart WHERE product_id = $idc';
     $statement = $dbc->prepare($query);
     $statement->execute();
     $statement->closeCursor();
