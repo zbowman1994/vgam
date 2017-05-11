@@ -8,14 +8,14 @@ div.container {
 header, footer {
     padding: 1 em;
     color: black;
-	font-family: "black-ops-one";
+	font-family: 'black-ops-one';
     background-color: cornflowerblue;
     clear: left;
     text-align: center;
 }
 
 p {
-    font-family: "black-ops-one";
+    font-family: 'black-ops-one';
     
 }
 
