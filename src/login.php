@@ -10,25 +10,15 @@
 <?php require 'view/footer.php'; ?>
 
 
-<h3>Contact Form</h3>
+<h3>Login</h3>
 
 <div class="container">
   <form action="/action_page.php">
-    <label for="fname"></label>
-    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+    <label for="uname">Username:</label>
+    <input type="text" id="uname" name="username" placeholder="Your username..">
 
-    <label for="lname"></label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="canada">Canada</option>
-	  <option value="australia">Australia</option>     
-      <option value="usa">USA</option>
-    </select>
-
-    <label for="subject">Subject</label>
-    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+    <label for="pass">Password:</label>
+    <input type="text" id="pass" name="password" placeholder="Your password..">
 
     <input type="submit" value="Submit">
   </form>
