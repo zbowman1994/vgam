@@ -6,17 +6,20 @@
     require_once 'model/db_functions.php';
 
     // Get Names from Form -- use server-side validation (the filter_input function)
-    $firstName = filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_SPECIAL_CHARS);
-    $lastName = filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_SPECIAL_CHARS);
+    $firstname = filter_input(INPUT_POST, 'firstname', FILTER_SANITIZE_SPECIAL_CHARS);
+    $lastname = filter_input(INPUT_POST, 'lastname', FILTER_SANITIZE_SPECIAL_CHARS);
+    $address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+    $password = $_POST['password'];
     
     // Get result of filter_input() and check for missing or invalid data
-    if (!isset($firstName)) {
+    if (!isset($firstname)) {
         $error_message = 'Missing first name.';
-    } elseif (!isset($lastName)) {
+    } elseif (!isset($lastname)) {
         $error_message = ' Missing last name.';
-    } elseif ($firstName === false) {
+    } elseif ($firstname === false) {
         $error_message = ' Invalid first name.';
-    } elseif ($lastName === false) {
+    } elseif ($lastname === false) {
         $error_message = ' Invalid last name.';
     } else {
         $error_message = '';
@@ -29,7 +32,7 @@
         exit();
     }
 
-    $fullName = "$firstName $lastName";
+    $fullName = "$firstname $lastname";
     
     // Has the user already entered the same name this session?
     $duplicateName = false;
@@ -50,7 +53,7 @@
       
     // Store Name in DB as long as it isn't a duplicate
     if (!$duplicateName) {
-        storeName($firstName, $lastName);
+        customer($firstname, $lastname, $address, $email, $password);
         
         // add this name to the $_SESSION 'names' array 
         $_SESSION['names'][] = $fullName; // add name to end of names array
@@ -62,7 +65,7 @@
     <h4>The Name you entered in the Form was:</h4>
      <!-- Note: Don't need htmlspecialchars() function here since
         these vars were already sanitized above -->
-    <h4 class="name"><?php echo $fullName; ?></h4>
+    <h4 class="name"><?php echo $fullname; ?></h4>
     <?php if ($duplicateName) { echo "<p>You already entered this name so it won't be stored in the DB.</p>"; } ?>
     <table class="table table-bordered table-striped" id="names">
         <caption>Names Stored in DB</caption>
