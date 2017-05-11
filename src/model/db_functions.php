@@ -154,7 +154,7 @@ function getCart()
 /*
  * This function deletes cart
  */
- function clearCart() {
+ /*function clearCart() {
 	
 	global $dbc;
     
@@ -167,13 +167,29 @@ function getCart()
  /*
   * removes the selected product from the cart
   */
- function removeProduct() {
+ function removeProduct($cpid) {
 	 global $dbc;
 	 
-	 $query = ' DELETE * FROM cart WHERE product_id = $id';
+	 $query = 'DELETE FROM cart WHERE product_product_id = :cpid';
     $statement = $dbc->prepare($query);
+	$statement->bindValue(':cpid', $cpid);
     $statement->execute();
     $statement->closeCursor();
+ }
+ 
+ /*Retrieve total of all products in cart
+ */
+ function getTotal() {
+	 global $dbc;
+	 
+	 $query = 'SELECT SUM(product_price) as total from products
+	INNER JOIN cart ON products.product_id = cart.products_product_id';
+    $statement = $dbc->prepare($query);
+    $statement->execute();
+    $total = $statement->fetchAll();
+    $statement->closeCursor();
+	
+    return $total;
  }
 
 ?>
