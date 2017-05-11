@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 div.container {
-    width: 100%;
     border: 1px solid gray;
 }
 
@@ -20,8 +19,9 @@ p {
 }
 
 h1 { 
+	font-family: 'Impact';
 	margin-top: -15px;
-    font-size: 70px;
+    font-size: 100px;
 }
 
 body {
