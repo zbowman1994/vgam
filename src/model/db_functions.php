@@ -9,15 +9,15 @@
  *
  * @return void 
  */
-function customer($f_name, $l_name, $address, $email, $password)
+function customer($firstname, $lastname, $address, $email, $password)
 {
     global $dbc;
     
-    $query = 'INSERT INTO customer (f_name, l_name, address, email, password) 
-			  VALUES (:f_name, :l_name, :address, :email, :password)';
+    $query = 'INSERT INTO customer(f_name, l_name, address, email, password) 
+			  VALUES (:firstname, :lastname, :address, :email, :password)';
     $statement = $dbc->prepare($query);
-    $statement->bindValue(':f_name', $f_name);
-    $statement->bindValue(':l_name', $l_name);
+    $statement->bindValue(':firstname', $firstname);
+    $statement->bindValue(':lastname', $lastname);
     $statement->bindValue(':address', $address);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':password', $password);
@@ -36,7 +36,7 @@ function getAllNames()
 {
     global $dbc;
     
-    $query = 'SELECT * from customer ORDER BY l_name';
+    $query = 'SELECT * from customer ORDER BY lastname';
     $statement = $dbc->prepare($query);
     $statement->execute();
     $names = $statement->fetchAll();

@@ -55,14 +55,14 @@ span.psw {
 </style>
 
 <div class="container">
-  <form action="/action_page.php">
+  <form action="display_names.php" method= "post">
     
     <div class="container">
-        <label for="f_name"><b>First Name:</b></label>
-    <input type="text" placeholder="Your First Name.." id="f_name" name="f_name" required>
+        <label for="firstname"><b>First Name:</b></label>
+    <input type="text" placeholder="Your First Name.." id="firstname" name="firstname" required>
       
-        <label for="l_name"><b>Last Name:</b></label>
-      <input type="text" placeholder="Your Last Name.." id="l_name" name="l_name" required>
+        <label for="lastname"><b>Last Name:</b></label>
+      <input type="text" placeholder="Your Last Name.." id="lastname" name="lastname" required>
       
       
         <label for="address"><b>Address:</b></label>
