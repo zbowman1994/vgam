@@ -7,11 +7,11 @@
 	
 	$addToCart = addProduct($_POST['product_id'], $_POST['quantity']);
 	
-	$removeItem = removeProduct($cpid);
+	//$removeItem = removeProduct($cpid);
 	$cart = getCart();
 	$total = getTotal();
 	
-	echo "this is the remove value" . $_POST['product_id'] . "<br>";
+	
 	 
 	?>
 
@@ -32,15 +32,15 @@
             <!-- use foreach loop to fetch contents of each row -->	   	
 			 
 			<?php foreach ($cart as $item) { ?>
-			<form action="cart.php" method="post">
+			<form action="cart.php" method="get">
 			<?php $cpid = $item['product_id']; ?>
-			<input type="hidden" value="<?php echo $cpid; ?>">
+			<input type="hidden" value="<?php removeProduct($cpid) ?>"
 			  <tr>
                 <td><?php echo $item['product_name']; ?></td>
 				<td><?php echo $item['product_price']; ?></td>
 				<td><?php echo $item['quantity']; ?></td>
 				
-				<td><button  type="submit" name="remove">Remove</button></td>
+				<td><button  type="submit" name="remove" >Remove</button></td>
 			</tr>
 			 </form>
 			 <?php } ?>
