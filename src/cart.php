@@ -4,15 +4,21 @@
     require_once 'model/db_connect.php';
     require_once 'model/db_functions.php';
 
-	
 	$idp = $_POST['product_id'];
-	$quantity = $_POST['quantity'];
-	$cpid = $_POST['remove'];
+		$quantity = $_POST['quantity'];
 	
-	$addToCart = addProduct($idp,$quantity);
+	
+	
+	
+	if (isset($idp)) {
+			$addToCart = addProduct($idp,$quantity);	
+	}else{
+		$cpid = $_POST['product_id'];
+		$removeItem = removeProduct($cpid);
+	}
 	$cart = getCart();
 	$total = getTotal();
-	$removeItem = removeProduct($cpid);
+	
 	
 	 
 	?>
