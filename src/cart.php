@@ -3,16 +3,16 @@
     
     require_once 'model/db_connect.php';
     require_once 'model/db_functions.php';
-	require_once 'model/deleteFromCart.php';
+
 	
 	$idp = $_POST['product_id'];
 	$quantity = $_POST['quantity'];
-	//$remove = $_get['product_id'];
+	$remove = $_POST['product_id'];
 	
 	$addToCart = addProduct($idp,$quantity);
 	$cart = getCart();
 	$total = getTotal();
-	//$removeItem = removeProduct($remove);
+	$removeItem = removeProduct($remove);
 	
 	 
 	?>
@@ -34,15 +34,15 @@
         <tbody>
             <!-- use foreach loop to fetch contents of each row -->	   	
              <?php foreach ($cart as $item) { ?>
-			 <form action="deleteFromCart.php" method="get">
-			<input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
+			 <form action="cart.php" method="post">
+			 
 			  <tr>
 				
                 <td><?php echo $item['product_name']; ?></td>
 				<td><?php echo $item['product_price']; ?></td>
 				<td><?php echo $item['quantity']; ?></td>
 				
-				<td><button type="submit" id="remove" >Remove</button></td>
+				<td><button type="submit" id="remove" value="<?php $item['product_id']?>">Remove</button></td>
 			 </tr>
 			 </form>
 			 <?php } ?>
