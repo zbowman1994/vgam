@@ -7,12 +7,12 @@
 	
 	$idp = $_POST['product_id'];
 	$quantity = $_POST['quantity'];
-	$remove = $_POST['product_id'];
+	$cpid = $_POST['remove'];
 	
 	$addToCart = addProduct($idp,$quantity);
 	$cart = getCart();
 	$total = getTotal();
-	$removeItem = removeProduct($remove);
+	$removeItem = removeProduct($cpid);
 	
 	 
 	?>
@@ -42,14 +42,15 @@
 				<td><?php echo $item['product_price']; ?></td>
 				<td><?php echo $item['quantity']; ?></td>
 				
-				<td><button type="submit" id="remove" value="<?php $item['product_id']?>">Remove</button></td>
+				<td><button type="submit" name="remove" id="remove" ><input type="hidden" name="cart_product_id" value="<?php echo $item['product_id']; ?>">Remove</button></td>
 			 </tr>
 			 </form>
 			 <?php } ?>
 		<tr>
 		<?php foreach ($total as $amount){ ?>
 		<td>subtotal is: <?php echo $amount['total']; ?></td>
-		<?php }?>
+		<td>total is : <?php echo $amount['total'] * 10; ?></td>
+		<?php } ?>
 		</tr>
 		</tbody>
     </table>

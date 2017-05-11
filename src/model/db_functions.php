@@ -167,12 +167,12 @@ function getCart()
  /*
   * removes the selected product from the cart
   */
- function removeProduct($remove) {
+ function removeProduct($cpid) {
 	 global $dbc;
 	 
-	 $query = 'DELETE FROM cart WHERE product_product_id = :remove';
+	 $query = 'DELETE FROM cart WHERE product_product_id = :cpid';
     $statement = $dbc->prepare($query);
-	$statement->bindValue(':remove', $remove);
+	$statement->bindValue(':cpid', $cpid);
     $statement->execute();
     $statement->closeCursor();
  }
