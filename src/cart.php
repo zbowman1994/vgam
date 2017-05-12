@@ -19,6 +19,9 @@
 
 <button type="button"><a href = "productSelection.php">Continue shopping</a></button>
 <button type="button">Checkout</button>
+<form action="deleteFromCart.php" method="get">
+<button type="submit"><input type="hidden" name="empty">Empty Cart</button>
+</form>
     <table border=2 rules=rows>
         <thead>
             <tr>
