@@ -170,7 +170,7 @@ function getCart()
  /*
   * removes the selected product from the cart
   */
- function removeProduct($cpid) {
+ /*function removeProduct($cpid) {
 	 global $dbc;
 	 
 	 $query = 'DELETE FROM cart WHERE product_product_id = :cpid';

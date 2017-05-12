@@ -33,10 +33,10 @@
             <!-- use foreach loop to fetch contents of each row -->	   	
 			 
 			<?php foreach ($cart as $item) { ?>
-			<form action="cart.php" method="get">
-			<?php $cpid = $item['product_id']; ?>
-			<input type="hidden" value="<?php removeProduct($cpid) ?>">
-			  <tr>
+			<form action="deleteFromCart.php" method="get">
+			<input type="hidden" name="product_id" value="<?php echo $item['product_id']; ?>">
+<input type="hidden" name="cart_id" value="<?php echo $item['cart_id']; ?>">			 
+			 <tr>
                 <td><?php echo $item['product_name']; ?></td>
 				<td><?php echo $item['product_price']; ?></td>
 				<td><?php echo $item['quantity']; ?></td>

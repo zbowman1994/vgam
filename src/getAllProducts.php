@@ -6,6 +6,7 @@
 	
 	// Get products from db
 	$products = getAllProducts();
+	
 	?>
 	
 <button type="button"><a href = "cart.php">Back to cart</a></button>
