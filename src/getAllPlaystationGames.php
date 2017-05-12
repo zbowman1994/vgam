@@ -40,7 +40,7 @@
 				<td><input type="number" name="quantity" value="quantity" placeholder="1" width="15"></td>				
 				<td><button type="submit">Add</button>
 			</tr>
-			</from>
+			</form>
             <?php } ?>
         </tbody>
     </table>
