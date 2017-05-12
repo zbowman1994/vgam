@@ -24,10 +24,7 @@
             <tr>
 				<th scope="col">name</th>
                 <th scope="col">price</th>
-				<th scope="col">quantity</th>
-				
-			<button type="submit" value="empty" >Empty Cart</button>
-				
+				<th scope="col">quantity</th>	
             </tr>
         </thead>
         <tbody>
