@@ -3,7 +3,7 @@
 /*
  * This function deletes cart
  */
- function clearCart() {
+ /*function clearCart() {
 	
 	global $dbc;
     

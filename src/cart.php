@@ -3,10 +3,11 @@
     
     require_once 'model/db_connect.php';
     require_once 'model/db_functions.php';
-
+	//$idp = $_POST['product_id'];
+	//$quantity = $_POST['quantity'];
 	
+	//$addToCart = addProduct($idp, $quantity);
 	$addToCart = addProduct($_POST['product_id'], $_POST['quantity']);
-	
 	//$removeItem = removeProduct($cpid);
 	$cart = getCart();
 	$total = getTotal();
@@ -34,7 +35,7 @@
 			<?php foreach ($cart as $item) { ?>
 			<form action="cart.php" method="get">
 			<?php $cpid = $item['product_id']; ?>
-			<input type="hidden" value="<?php removeProduct($cpid) ?>"
+			<input type="hidden" value="<?php removeProduct($cpid) ?>">
 			  <tr>
                 <td><?php echo $item['product_name']; ?></td>
 				<td><?php echo $item['product_price']; ?></td>
