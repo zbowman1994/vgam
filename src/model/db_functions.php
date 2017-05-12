@@ -144,7 +144,7 @@ function getCart()
 	
 	global $dbc;
 	
-	$query = 'SELECT product_id, product_name, product_price, quantity from products
+	$query = 'SELECT cart_id, product_id, product_name, product_price, quantity from products
 	INNER JOIN cart ON products.product_id = cart.products_product_id';
     $statement = $dbc->prepare($query);
     $statement->execute();
@@ -170,7 +170,7 @@ function getCart()
  /*
   * removes the selected product from the cart
   */
- function removeProduct($cpid) {
+ /*function removeProduct($cpid) {
 	 global $dbc;
 	 
 	 $query = 'DELETE FROM cart WHERE product_product_id = :cpid';
