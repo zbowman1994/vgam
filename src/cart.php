@@ -38,7 +38,7 @@
 			<input type="hidden" name="product_id" value="<?php echo $item['product_id']; ?>">
 			<input type="hidden" name="cart_id" value="<?php echo $item['cart_id']; ?>">			 
 			 <tr>
-                <td><?php echo $item['product_name']; ?></td>
+                <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
 				<td><?php echo $item['product_price']; ?></td>
 				<td><?php echo $item['quantity']; ?></td>
 				<td><?php echo $item['cart_id']; ?> <td>
