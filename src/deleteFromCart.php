@@ -39,6 +39,7 @@ function removeProduct($prodId, $cartId) {
     $statement->closeCursor();
  }
 function removeQuantity($prodId, $qty) {
+
     global $dbc;
     
     $query = 'UPDATE cart SET quantity = :qty WHERE products_product_id = :prodId';
