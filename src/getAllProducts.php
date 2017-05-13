@@ -8,7 +8,8 @@
 	$products = getAllProducts();
 	
 	?>
-	
+
+<link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
