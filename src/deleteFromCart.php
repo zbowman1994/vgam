@@ -5,6 +5,7 @@ require_once 'model/db_functions.php';
 $prodId = $_GET['product_id'];
 $cartId = $_GET['cart_id'];
 $name = $_GET['product_name'];
+$qty = $_GET['quantity'];
 
 $removeItem = removeProduct($prodId, $cartId);
 if (isset($_GET['empty'])){
@@ -37,11 +38,23 @@ function removeProduct($prodId, $cartId) {
     $statement->execute();
     $statement->closeCursor();
  }
+function removeQuantity($prodID, $qty) {
+    global $dbc;
+    
+    $query = 'UPDATE cart SET quantity = :qty WHERE products_product_id = :prodId';
+    $statement = $$dbc->prepare($query);
+    $statement->bindValue(':product', $prodId);
+    $statement->bindValue(':qty', $qty);
+    $statement->execute();
+    $statement->closeCursor();
+    
+    
+}
  
  ?>
  
  <p> Succesfully removed <?php echo $name ?></p>
- <p> where would you like to do now? </p>
+ <p> What would you like to do now? </p>
  <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "productSelection.php">Product Selection</a></button>
 <button type="button"><a href = "index.php">Main</a></button>
