@@ -7,10 +7,19 @@ $cartId = $_GET['cart_id'];
 $name = $_GET['product_name'];
 $qty = $_GET['quantity'];
 
-$removeItem = removeProduct($prodId, $cartId);
+if (isset($_GET['update'])){
+    updateQuantity($prodId, $qty);
+}
+ if (isset($_GET['remove'])){
+     
+     removeProduct($prodId, $cartId);
+ }
+
+          
 if (isset($_GET['empty'])){
 	clearCart();
 }
+
 
 /*
  * This function deletes cart still need to do
@@ -38,7 +47,7 @@ function removeProduct($prodId, $cartId) {
     $statement->execute();
     $statement->closeCursor();
  }
-function removeQuantity($prodId, $qty) {
+function updateQuantity($prodId, $qty) {
 
     global $dbc;
     
