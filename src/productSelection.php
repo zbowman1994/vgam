@@ -1,3 +1,14 @@
+<?php
+session_start();
+if (!isset($_SESSION['count'])) {
+  $_SESSION['count'] = 0;
+} else {
+  $_SESSION['count']++;
+}
+//this adds a new session id when product selection screen appears
+/*session_start();
+unset($_SESSION['count']);
+*/?>
 <?php require 'view/header.html'; ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <button type="button" id="main"><a href = "index.php">Main</a></button>
