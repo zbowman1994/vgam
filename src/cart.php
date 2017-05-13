@@ -25,9 +25,9 @@
     <table border=2 rules=rows>
         <thead>
             <tr>
-				<th scope="col">name</th>
-                <th scope="col">price</th>
-				<th scope="col">quantity</th>	
+				<th scope="col">Name</th>
+                <th scope="col">Price</th>
+				<th scope="col">Quantity</th>	
             </tr>
         </thead>
         <tbody>
@@ -39,18 +39,18 @@
 			<input type="hidden" name="cart_id" value="<?php echo $item['cart_id']; ?>">			 
 			 <tr>
                 <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
-				<td><?php echo $item['product_price']; ?></td>
+				<td>$<?php echo $item['product_price']; ?></td>
 				<td><?php echo $item['quantity']; ?></td>
-				<td><?php echo $item['cart_id']; ?> <td>
 				<td><button  type="submit" name="remove" >Remove</button></td>
+				<td><input type="number" name="quantity" value="quantity" placeholder="1" width="5"></td>
 			</tr>
 			 </form>
 			 <?php } ?>
 			  
 		<tr>
 		<?php foreach ($total as $amount){ ?>
-		<td>subtotal is: <?php echo $amount['total']; ?></td>
-		<td>total is : <?php echo $amount['total'] * 10; ?></td>
+		<td>Subtotal:  $<?php echo $amount['total']; ?></td>
+		<td>Total:  $<?php echo round($amount['total'] * 0.15 + $amount['total']),2; ?></td>
 		<?php } ?>
 		</tr>
 		</tbody>
