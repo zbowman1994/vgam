@@ -50,7 +50,7 @@
 		<tr>
 		<?php foreach ($total as $amount){ ?>
 		<td>Subtotal:  $<?php echo $amount['total']; ?></td>
-		<td>Total:  $<?php echo round($amount['total'] * 0.15 + $amount['total']),2; ?></td>
+		<td>Total:  $<?php echo(round(($amount['total'] * 0.15 + $amount['total']),2)); ?></td>
 		<?php } ?>
 		</tr>
 		</tbody>
