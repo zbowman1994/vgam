@@ -79,8 +79,8 @@
             <!-- use foreach loop to fetch contents of each row -->
             <?php foreach ($names as $name) { ?>
             <tr>
-                <td><?php echo $name['last_name']; ?></td>
-                <td><?php echo $name['first_name']; ?></td>
+                <td><?php echo $name['l_name']; ?></td>
+                <td><?php echo $name['f_name']; ?></td>
             </tr>
             <?php } ?>
         </tbody>
