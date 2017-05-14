@@ -24,7 +24,7 @@
 				<th scope="col">Product Description</th>
 				<th scope="col">Product Price</th>
 				<th scope="col">Quantity</th>
-				<th scope="col">Add/Remove product</th>
+				<th scope="col">Add product</th>
             </tr>
         </thead>
         <tbody>

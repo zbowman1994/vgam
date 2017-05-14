@@ -7,7 +7,7 @@ addProduct($_POST['product_id'], $_POST['quantity']);
 $cart = getCart();
 $total = getTotal();
 ?>
-<?php echo $_SESSION['count'] . "    in th sid    ";?>
+
 
 <button type="button"><a href = "productSelection.php">Continue shopping</a></button>
 <button type="button">Checkout</button>

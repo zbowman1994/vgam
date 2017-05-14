@@ -154,31 +154,6 @@ function getCart()
     return $cart;
 }
 
-/*
- * This function deletes cart
- */
- /*function clearCart() {
-	
-	global $dbc;
-    
-    $query = 'TRUNCATE TABLE cart';
-    $statement = $dbc->prepare($query);
-    $statement->execute();
-    $statement->closeCursor();
-	
- }
- /*
-  * removes the selected product from the cart
-  */
- /*function removeProduct($cpid) {
-	 global $dbc;
-	 
-	 $query = 'DELETE FROM cart WHERE product_product_id = :cpid';
-    $statement = $dbc->prepare($query);
-	$statement->bindValue(':cpid', $cpid);
-    $statement->execute();
-    $statement->closeCursor();
- }
  
  /*Retrieve total of all products in cart
  */

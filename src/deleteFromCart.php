@@ -64,7 +64,7 @@ function updateQuantity($prodId, $qty) {
  
  ?>
  
- <p> Succesfully removed <?php echo $name ?></p>
+ <p> Succesfully updated <?php echo $name ?></p>
  <p> What would you like to do now? </p>
  <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "productSelection.php">Product Selection</a></button>
