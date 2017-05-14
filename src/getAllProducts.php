@@ -4,7 +4,7 @@ require_once 'model/db_functions.php';
 
 $products = getAllProducts();
 ?>
-<?php echo $_SESSION['count'] . "    is the sid    ";?>
+
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
