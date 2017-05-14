@@ -12,7 +12,7 @@
 function customer($firstname, $lastname, $address, $email, $password)
 {
     global $dbc;
-    
+    echo "ive made it to insert function";
     $query = 'INSERT INTO customer(f_name, l_name, address, email, password) 
 			  VALUES (:firstname, :lastname, :address, :email, :password)';
     $statement = $dbc->prepare($query);
@@ -36,7 +36,7 @@ function getAllNames()
 {
     global $dbc;
     
-    $query = 'SELECT * from customer ORDER BY lastname';
+    $query = 'SELECT * from customer ORDER BY l_name';
     $statement = $dbc->prepare($query);
     $statement->execute();
     $names = $statement->fetchAll();
