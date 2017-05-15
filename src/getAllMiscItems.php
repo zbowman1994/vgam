@@ -8,7 +8,6 @@ $products = getAllMiscItems();
 <button type="button"><a href = "getAllProducts.php">All products</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
-<button type="button"><a href = "index.php">Main</a></button>
 <button type="button"><a href = "contact.php">Contact us</a></button>
 <button type="button"><a href = "login.php">Login</a></button>
 <table class="table table-bordered table-striped" id="names">
@@ -43,6 +42,5 @@ $products = getAllMiscItems();
 <button type="button"><a href = "getAllProducts.php">All products</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
-<button type="button"><a href = "index.php">Main</a></button>
 <button type="button"><a href = "contact.php">Contact us</a></button>
 <button type="button"><a href = "login.php">Login</a></button>
