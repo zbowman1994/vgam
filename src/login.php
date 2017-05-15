@@ -55,7 +55,7 @@
             <input type="text" placeholder="Your Email.." id="email" name="email" required>
             <label for="password"><b>Password:</b></label>
             <input type="password" placeholder="Your password.." id="password" name="password" required>
-            <button type="submit">Login</button>
+            <button type="submit"><a href="welcomeBack.php">Login</button>
             <input type="checkbox" checked="checked"> Remember Me
         </div>
         <div class="container" style="background-color:#f1f1f1">
