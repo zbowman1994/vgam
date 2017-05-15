@@ -11,6 +11,8 @@
  */
 function customer($firstname, $lastname, $address, $email, $password) {
     global $dbc;
+	$password = password_hash($password, password_default);
+	echo $password;
     echo "ive made it to insert function";
     $query = 'INSERT INTO customer(f_name, l_name, address, email, password) 
 			  VALUES (:firstname, :lastname, :address, :email, :password)';
