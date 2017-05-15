@@ -1,11 +1,12 @@
 <?php
-/** 
+
+/**
  * DB Connection Script
  * DON'T CHANGE ANYTHING IN THIS FILE!
  *
- **/
+ * */
 require 'db_credentials.php';
- 
+
 // See if this Env. Var. is set
 // if so, we're running on Dokku
 $env = getenv('DATABASE_URL');
@@ -22,7 +23,7 @@ if ($env) {
 
 // dsn - data source name
 $dsn = "mysql:host=$host;dbname=$dbname";
-    
+
 try {
     $dbc = new PDO($dsn, $username, $password);
 } catch (PDOException $e) {

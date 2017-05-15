@@ -1,14 +1,10 @@
 <?php
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
-
 addProduct($_POST['product_id'], $_POST['quantity']);
-
 $cart = getCart();
 $total = getTotal();
 ?>
-
-
 <button type="button"><a href = "productSelection.php">Continue shopping</a></button>
 <button type="button">Checkout</button>
 <form action="deleteFromCart.php" method="get">
@@ -23,7 +19,7 @@ $total = getTotal();
         </tr>
     </thead>
     <tbody>
-<?php foreach ($cart as $item) { ?>
+        <?php foreach ($cart as $item) { ?>
         <form action="deleteFromCart.php" method="get">
             <input type="hidden" name="product_id" value="<?php echo $item['product_id']; ?>">
             <input type="hidden" name="cart_id" value="<?php echo $item['cart_id']; ?>">			 
@@ -36,12 +32,12 @@ $total = getTotal();
                 <td><button  type="submit" name="remove" >Delete</button></td>
             </tr>
         </form>
-<?php } ?>  
+    <?php } ?>  
     <tr>
-    <?php foreach ($total as $amount) { ?>
+        <?php foreach ($total as $amount) { ?>
             <td>Subtotal:  $<?php echo $amount['total']; ?></td>
             <td>Total:  $<?php echo(round(($amount['total'] * 0.15 + $amount['total']), 2)); ?></td>
-<?php } ?>
+        <?php } ?>
     </tr>
 </tbody>
 </table>

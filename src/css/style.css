@@ -7,7 +7,7 @@ div.container {
 header, footer {
     padding: 1 em;
     color: black;
-	font-family: 'black-ops-one';
+    font-family: 'black-ops-one';
     background-color: cornflowerblue;
     clear: left;
     text-align: center;
@@ -15,24 +15,24 @@ header, footer {
 
 p {
     font-family: 'black-ops-one';
-    
+
 }
 
 h1 { 
-	font-family: 'Impact';
-	margin-top: -15px;
+    font-family: 'Impact';
+    margin-top: -15px;
     font-size: 100px;
 }
 
 body {
-	background-image: url(images/videogame.jpg); 
-	background-repeat: no-repeat; 
-	background-position: 50% 50%; 
-	background-attachment:fixed; 
-	color: #000000; 
-	margin: 0; 
+    background-image: url(images/videogame.jpg); 
+    background-repeat: no-repeat; 
+    background-position: 50% 50%; 
+    background-attachment:fixed; 
+    color: #000000; 
+    margin: 0; 
 }
-    
+
 
 
 
@@ -75,39 +75,39 @@ caption {
 }
 
 button#contactus {
-	font-family: Tahoma, Geneva, sans-serif;
-	border-style: outset;
-	border-radius: 8px;
+    font-family: Tahoma, Geneva, sans-serif;
+    border-style: outset;
+    border-radius: 8px;
     border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
-    
+
 }
 
 button#main {
     font-family: Tahoma, Geneva, sans-serif;
-	border-style: outset;
-	border-radius: 8px;
+    border-style: outset;
+    border-radius: 8px;
     border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
-    
+
 }
 
 button#products {
     font-family: Tahoma, Geneva, sans-serif;
-	border-style: outset;
-	border-radius: 8px;
+    border-style: outset;
+    border-radius: 8px;
     border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
-    
+
 }
 
 button#login {
-	font-family: Tahoma, Geneva, sans-serif;
-	border-style: outset;
-	border-radius: 8px;
+    font-family: Tahoma, Geneva, sans-serif;
+    border-style: outset;
+    border-radius: 8px;
     border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
@@ -115,22 +115,22 @@ button#login {
 
 button#allproducts {
     font-family: Tahoma, Geneva, sans-serif;
-	border-style: outset;
-	border-radius: 8px;
+    border-style: outset;
+    border-radius: 8px;
     border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
     width: 1000px;
     height: 150px;
     font-size: 20px;
-    
+
 }
 
 button#wiigames {
     border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
-    
+
 }
 
 input[type=text], select, textarea {
