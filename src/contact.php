@@ -1,13 +1,12 @@
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <?php require 'view/header.html'; ?>
-<button type="button" id="main"><a href="index.php">Main</a></button>
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
-<button type="button" id="products"><a href = "productSelection.php">Products</a></button>
+<button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
 <button type="button" id="login"><a href = "login.php">Login</a></button>
 <?php require 'view/footer.php'; ?>
 <h3>Contact Form</h3>
 <div class="container">
-    <form action="/action_page.php">
+    <form action="contactSubmit.php">
         <label for="fname"></label>
         <input type="text" id="fname" name="firstname" placeholder="Your first name..">
         <label for="lname"></label>
@@ -20,9 +19,8 @@
         </select>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"><a href = "contactSubmit.php"></a>
     </form>
 </div>
-</body>
-</html>
+
 

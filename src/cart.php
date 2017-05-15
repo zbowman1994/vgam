@@ -27,8 +27,8 @@ $total = getTotal();
                 <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
                 <td>$<?php echo $item['product_price']; ?></td>
                 <td><?php echo $item['quantity']; ?></td>
-                <td><input type="number" name="quantity" value="quantity" placeholder="*TO-DO* Update quantity" width="5"></td>
-                <td><button  type="submit" name="update" >Update quantity</button></td>
+                <td><input type="number" name="quantity" value="quantity" placeholder="Update quantity" width="5"></td>
+                <td><button  type="submit" name="update" >Update</button></td>
                 <td><button  type="submit" name="remove" >Delete</button></td>
             </tr>
         </form>
