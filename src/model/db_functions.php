@@ -146,4 +146,17 @@ function getTotal() {
     return $total;
 }
 
+function login($email, $password) {
+	global $dbc;
+    $query = 'SELECT email, password from customer WHERE email = :email AND password = :password';
+    $statement = $dbc->prepare($query);
+	$statement->bindValue(':email', $email);
+    $statement->bindValue(':password', $password);
+    $statement->execute();
+    $login = $statement->fetchAll();
+    $statement->closeCursor();
+    return $login;
+}
+
+
 ?>
