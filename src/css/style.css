@@ -33,37 +33,6 @@ body {
     margin: 0; 
 }
 
-
-
-
-
-/*.copyright {
-    margin: 25px 0 15px 15px;
-    font-size: 12px;
-}
-
-/* add a border and padding around the fields in the form */
-.nameFields {
-    border: solid 1px #DDD;
-    padding: 5px 20px 5px 20px;
-}
-
-/* this overrides what's in bootstrap to mimic HTML5 legend behaviour */
-.formLegend {
-    width: auto;
-    padding: 0 10px;
-    border-bottom: none;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-/* give a little emphasis to the name the user entered */
-.name {
-    color: purple;
-    font-weight: bold;
-    margin-top: 15px;
-}
-
 /* give the links a bit of styling */
 a:link { font-size: 30px; }
 a:hover { font-weight: bold; }
@@ -112,7 +81,15 @@ button#login {
     padding: 20px 125px;
     background-color: white;
 }
-
+button#cart {
+    font-family: Tahoma, Geneva, sans-serif;
+    border-style: outset;
+    border-radius: 8px;
+    border: 2px black solid;
+    padding: 20px 125px;
+    background-color: white;
+    
+}
 button#allproducts {
     font-family: Tahoma, Geneva, sans-serif;
     border-style: outset;
