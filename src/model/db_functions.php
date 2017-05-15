@@ -132,12 +132,12 @@ function getCart() {
     return $cart;
 }
 
-/* Retrieve total of all products in cart
+/* Retrieve total of all products in cart need to add quantity fror running total
  */
 
 function getTotal() {
     global $dbc;
-    $query = 'SELECT SUM(product_price) as total from products
+    $query = 'SELECT SUM(product_price * quantity) as total from products
 	INNER JOIN cart ON products.product_id = cart.products_product_id';
     $statement = $dbc->prepare($query);
     $statement->execute();
