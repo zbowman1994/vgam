@@ -8,10 +8,12 @@ $qty = $_GET['quantity'];
 if (isset($_GET['update'])) {
     updateQuantity($prodId, $qty);
 	echo 'Successfully updated ' . $name;
+	
 }
 if (isset($_GET['remove'])) {
     removeProduct($prodId, $cartId);
 	echo 'Successfully removed ' . $name;
+	
 }
 if (isset($_GET['empty'])) {
     clearCart();
@@ -41,6 +43,7 @@ function removeProduct($prodId, $cartId) {
     $statement->bindValue(':cart', $cartId);
     $statement->execute();
     $statement->closeCursor();
+
 }
 
 function updateQuantity($prodId, $qty) {
