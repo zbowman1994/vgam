@@ -35,6 +35,7 @@
 
         </tr>
     </table>
+	<br>
     <button type="button" id="allproducts"><a href = "getAllProducts.php">All Products</a></button>
 </div>
 <?php require 'view/footer.php'; ?>
