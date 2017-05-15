@@ -24,6 +24,17 @@ function customer($firstname, $lastname, $address, $email, $password) {
     $statement->closeCursor();
 }
 
+function confirm($email) {
+    
+global $dbc;
+$query= 'SELECT f_name, l_name, email, address, FROM customer where email = email';
+$statement = $dbc->prepare($query);
+$statement->bindValue(':email', $email);
+$client = $statement->fetchAll();
+$statement->closeCursor();
+return $client;
+
+}
 /**
  * This function generates the result set of
  * the tblNames table.
