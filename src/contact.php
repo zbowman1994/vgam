@@ -6,7 +6,7 @@
 <?php require 'view/footer.php'; ?>
 <h3>Contact Form</h3>
 <div class="container">
-    <form action="confirmation.php">
+    <form action="contactSubmit.php">
         <label for="fname"></label>
         <input type="text" id="fname" name="firstname" placeholder="Your first name..">
         <label for="lname"></label>
@@ -19,7 +19,7 @@
         </select>
         <label for="subject">Subject</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-        <input type="submit" value="Submit"><a href = "confirmation.php"></a>
+        <input type="submit" value="Submit"><a href = "contactSubmit.php"></a>
     </form>
 </div>
 
