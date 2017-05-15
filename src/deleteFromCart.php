@@ -7,12 +7,15 @@ $name = $_GET['product_name'];
 $qty = $_GET['quantity'];
 if (isset($_GET['update'])) {
     updateQuantity($prodId, $qty);
+	echo 'Successfully updated ' . $name;
 }
 if (isset($_GET['remove'])) {
     removeProduct($prodId, $cartId);
+	echo 'Successfully removed ' . $name;
 }
 if (isset($_GET['empty'])) {
     clearCart();
+	echo 'Cart emptied' ;
 }
 /*
  * This function deletes cart still need to do
@@ -42,7 +45,6 @@ function removeProduct($prodId, $cartId) {
 
 function updateQuantity($prodId, $qty) {
     global $dbc;
-    echo $prodId . " product id " . $qty . " quantity";
     $query = 'UPDATE cart SET quantity = :qty WHERE products_product_id = :product';
     $statement = $dbc->prepare($query);
     $statement->bindValue(':product', $prodId);
@@ -51,7 +53,7 @@ function updateQuantity($prodId, $qty) {
     $statement->closeCursor();
 }
 ?>
-<p> Successfully updated <?php echo $name ?></p>
+<p></p>
 <p> What would you like to do now? </p>
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "productSelection.php">Product Selection</a></button>
