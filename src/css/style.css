@@ -43,37 +43,7 @@ caption {
     font-size: 24px;
 }
 
-button#contactus {
-    font-family: Tahoma, Geneva, sans-serif;
-    border-style: outset;
-    border-radius: 8px;
-    border: 2px black solid;
-    padding: 20px 125px;
-    background-color: white;
-
-}
-
-button#main {
-    font-family: Tahoma, Geneva, sans-serif;
-    border-style: outset;
-    border-radius: 8px;
-    border: 2px black solid;
-    padding: 20px 125px;
-    background-color: white;
-
-}
-
-button#products {
-    font-family: Tahoma, Geneva, sans-serif;
-    border-style: outset;
-    border-radius: 8px;
-    border: 2px black solid;
-    padding: 20px 125px;
-    background-color: white;
-
-}
-
-button#login {
+button {
     font-family: Tahoma, Geneva, sans-serif;
     border-style: outset;
     border-radius: 8px;
@@ -81,16 +51,8 @@ button#login {
     padding: 20px 125px;
     background-color: white;
 }
-button#cart {
-    font-family: Tahoma, Geneva, sans-serif;
-    border-style: outset;
-    border-radius: 8px;
-    border: 2px black solid;
-    padding: 20px 125px;
-    background-color: white;
-    
-}
-button#allproducts {
+
+#allproducts {
     font-family: Tahoma, Geneva, sans-serif;
     border-style: outset;
     border-radius: 8px;
@@ -103,7 +65,7 @@ button#allproducts {
 
 }
 
-button#wiigames {
+#wiigames {
     border: 2px black solid;
     padding: 20px 125px;
     background-color: white;
@@ -121,26 +83,51 @@ input[type=text], select, textarea {
     resize: vertical;
 }
 
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
+/*changes backgroud on user login to white
 .container {
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-}
+}*/
 
 a {
     text-decoration: none;
 }
+-----------------------------------------------------------------------------------
 
+ form {
+        border: 3px solid #f1f1f1;
+    }
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 5px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    #userlogin{
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+    .container {
+        padding: 16px;
+    }
+    span.psw {
+        float: left;
+        padding-top: 16px;
+    }
