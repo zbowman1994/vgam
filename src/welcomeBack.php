@@ -3,14 +3,15 @@
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
 // Get products from db
-$login = login($_POST['email'],$_POST['password']);
-if (isset($POST['login'])) {
-	$login = login($_POST['email'],$_POST['password']);
-}elseif (isset($_POST['register'])) {
-	echo 'checked to see if register was clicked<br>';
-	echo $_POST['firstname']. " " . $_POST['lastname']. " " . $_POST['address']. " " . $_POST['email']. " " . $_POST['password'] . "<br>";
+$usrPass = $_POST['password'];
+$usrEmail = $_POST['email'];
+
+
+
+
 	$customer = customer($_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
-	}
+		$verify = login($usrEmail);
+	
 	
 
 ?>
@@ -27,11 +28,22 @@ table, th, td {
 <br><br><br>
 <table align="center">
   <tr>
-    
-	<?php foreach ($login as $user) {
-		echo 'Welcome ' . $user['f_name'] . '!';
-		echo $email;
-	}	?>
+    <?php if (isset($_POST['register'])) {
+		echo 'Thanks for joining ' . $_POST['firstname'] . '<br>';
+	}?>
+	<?php 
+
+	foreach ($verify as $check) {
+		$hashedPass = $check['password'];
+		$name = $check['f_name'];		
+	}
+	if (isset($_POST['login'])){
+	if (password_verify($usrPass, $hashedPass)) {
+		echo 'Yeah thats right! Welcome ' . $name;
+	} else {
+		echo 'Sorry try again.';
+	}}
+	?>
   </tr>
 </table>
 <br><br><br>

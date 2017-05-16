@@ -10,11 +10,8 @@
  * @return void 
  */
 function customer($firstname, $lastname, $address, $email, $password) {
-	echo 'inside the insert function<br>';
-	echo $firstname. " " .$lastname. " " .$address. " " .$email. " " .$password. '<br>';
-    global $dbc;
+	global $dbc;
     $password = password_hash($password, PASSWORD_DEFAULT);
-	echo $password . ' pass after hash';
     $query = 'INSERT INTO customer(f_name, l_name, address, email, password) 
 			  VALUES (:firstname, :lastname, :address, :email, :password)';
     $statement = $dbc->prepare($query);
@@ -160,16 +157,15 @@ function getTotal() {
     return $total;
 }
 
-function login($email, $password) {
+function login($email) {
 	global $dbc;
-    $query = 'SELECT f_name, email, password from customer WHERE email = :email AND password = :password';
+    $query = 'SELECT f_name, email, password FROM customer WHERE email = :email';
     $statement = $dbc->prepare($query);
 	$statement->bindValue(':email', $email);
-    $statement->bindValue(':password', $password);
     $statement->execute();
-    $login = $statement->fetchAll();
+    $verify = $statement->fetchAll();
     $statement->closeCursor();
-    return $login;
+	return $verify;
 }
 
 
