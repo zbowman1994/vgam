@@ -13,7 +13,7 @@
 <input type="text" name="email">
 <label for="password">Password</label>
 <input type="password" name="password">
-<button type="submit" id="userlogin"><a href="welcomeBack.php">Login</button>
+<button type="submit" name="login" id="userlogin">Login</button>
 </form>
 </div>
 <div class="container">
@@ -29,7 +29,7 @@
             <input type="text" placeholder="Your Email.." id="email" name="email" required>
             <label for="password"><b>Password:</b></label>
             <input type="password" placeholder="Your password.." id="password" name="password" required>
-            <button type="submit" id="userlogin"><a href="welcomeBack.php">Register</button>
+            <button type="submit" name="register" id="userlogin">Register</button>
             <input type="checkbox" checked="checked"> Remember Me
         </div>
         

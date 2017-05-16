@@ -4,7 +4,11 @@ require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
 // Get products from db
 $login = login($_POST['email'],$_POST['password']);
-
+if (isset($POST['login'])) {
+	$login = login($_POST['email'],$_POST['password']);
+}elseif (isset($_POST['register'])) {
+	$customer = customer($_POST['f_name'],$_POST['l_name'],$_POST['address'],$_POST['email'],$_POST['password']);
+	}
 	
 
 ?>
@@ -21,9 +25,9 @@ table, th, td {
 <br><br><br>
 <table align="center">
   <tr>
-    <th>Welcome back</th>
+    
 	<?php foreach ($login as $user) {
-		echo $user['f_name'];
+		echo 'Welcome ' . $user['f_name'] . '!';
 	}	?>
   </tr>
 </table>
