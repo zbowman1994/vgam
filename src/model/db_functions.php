@@ -162,14 +162,21 @@ function getTotal() {
 
 function login($email, $password) {
 	global $dbc;
-    $query = 'SELECT f_name, email, password from customer WHERE email = :email AND password = :password';
+    $query = 'SELECT email, password FROM customer WHERE email = :email';
     $statement = $dbc->prepare($query);
 	$statement->bindValue(':email', $email);
-    $statement->bindValue(':password', $password);
+
     $statement->execute();
     $login = $statement->fetchAll();
     $statement->closeCursor();
-    return $login;
+	$hash = $login['password'];
+	if (password_verify($password, $hash)) {
+			$okay = true;
+		return $okay;
+	} else {
+		$okay = false;
+		return $okay;
+	}
 }
 
 

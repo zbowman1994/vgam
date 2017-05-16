@@ -3,7 +3,7 @@
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
 // Get products from db
-$login = login($_POST['email'],$_POST['password']);
+
 if (isset($POST['login'])) {
 	$login = login($_POST['email'],$_POST['password']);
 }elseif (isset($_POST['register'])) {
@@ -28,10 +28,13 @@ table, th, td {
 <table align="center">
   <tr>
     
-	<?php foreach ($login as $user) {
-		echo 'Welcome ' . $user['f_name'] . '!';
-		echo $email;
-	}	?>
+	<?php foreach ($login as $answer) {
+	if($answer['true'] = true){
+		echo 'success';
+	}else {
+		echo 'failed';
+	}
+	}?>
   </tr>
 </table>
 <br><br><br>
