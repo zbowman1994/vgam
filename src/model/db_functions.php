@@ -160,23 +160,15 @@ function getTotal() {
     return $total;
 }
 
-function login($email, $password) {
+function login($email) {
 	global $dbc;
     $query = 'SELECT email, password FROM customer WHERE email = :email';
     $statement = $dbc->prepare($query);
 	$statement->bindValue(':email', $email);
-
     $statement->execute();
-    $login = $statement->fetchAll();
+    $verify = $statement->fetchAll();
     $statement->closeCursor();
-	$hash = $login['password'];
-	if (password_verify($password, $hash)) {
-			$okay = true;
-		return $okay;
-	} else {
-		$okay = false;
-		return $okay;
-	}
+	return $verify;
 }
 
 

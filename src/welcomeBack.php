@@ -3,12 +3,11 @@
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
 // Get products from db
-
-if (isset($POST['login'])) {
-	$login = login($_POST['email'],$_POST['password']);
-}elseif (isset($_POST['register'])) {
-	echo 'checked to see if register was clicked<br>';
-	echo $_POST['firstname']. " " . $_POST['lastname']. " " . $_POST['address']. " " . $_POST['email']. " " . $_POST['password'] . "<br>";
+$usrPass = $_POST['password'];
+$usrEmail = $_POST['email'];
+//if (isset($POST['login'])) {
+	$verify = login($usrEmail);
+if (isset($_POST['register'])) {
 	$customer = customer($_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
 	}
 	
@@ -28,13 +27,22 @@ table, th, td {
 <table align="center">
   <tr>
     
-	<?php foreach ($login as $answer) {
-	if($answer['true'] = true){
-		echo 'success';
-	}else {
-		echo 'failed';
+	<?php 
+	
+	foreach ($verify as $check) {
+		$hashedPass = $check['password'];
+		echo $check['email'] . '<br>';
+		echo $check['password'] . '<br>';		
+	
+	
+	if (password_verify($usrPass, $hashedPass)) {
+		echo 'yeah thats right';
+	} else {
+		echo $hashedPass;
+		echo 'pissoff you hacker';
 	}
-	}?>
+	}
+	?>
   </tr>
 </table>
 <br><br><br>
