@@ -5,12 +5,13 @@ div.container {
 }
 
 header, footer {
-    padding: 1 em;
+    padding: 6 em;
     color: black;
     font-family: 'black-ops-one';
     background-color: cornflowerblue;
     clear: left;
     text-align: center;
+    
 }
 
 p {
