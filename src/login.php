@@ -1,19 +1,23 @@
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
-<?php require 'view/header.html'; ?>
+<?php require 'view/header.html'; 
+
+?>
 
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
 <button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
 
 
 <div>
+<form action="welcomeBack.php" method="post">
 <label for="email">Email</label>
 <input type="text" name="email">
 <label for="password">Password</label>
 <input type="password" name="password">
 <button type="submit" id="userlogin"><a href="welcomeBack.php">Login</button>
+</form>
 </div>
 <div class="container">
-    <form action="display_names.php" method= "post">
+    <form action="welcomeBack.php" method= "post">
         <div class="container">
             <label for="firstname"><b>First Name:</b></label>
             <input type="text" placeholder="Your First Name.." id="firstname" name="firstname" required>

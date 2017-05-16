@@ -1,5 +1,13 @@
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
-<?php require 'view/header.html'; ?>
+<?php require 'view/header.html'; 
+require_once 'model/db_connect.php';
+require_once 'model/db_functions.php';
+// Get products from db
+$login = login($_POST['email'],$_POST['password']);
+
+	
+
+?>
 <button type="button" id="products"><a href = "productSelection.php">Products</a></button>
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
 
@@ -13,7 +21,10 @@ table, th, td {
 <br><br><br>
 <table align="center">
   <tr>
-    <th>Welcome back *Name* ! </th>
+    <th>Welcome back</th>
+	<?php foreach ($login as $user) {
+		echo $user['f_name'];
+	}	?>
   </tr>
 </table>
 <br><br><br>
