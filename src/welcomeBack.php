@@ -7,7 +7,9 @@ $login = login($_POST['email'],$_POST['password']);
 if (isset($POST['login'])) {
 	$login = login($_POST['email'],$_POST['password']);
 }elseif (isset($_POST['register'])) {
-	$customer = customer($_POST['f_name'],$_POST['l_name'],$_POST['address'],$_POST['email'],$_POST['password']);
+	echo 'checked to see if register was clicked<br>';
+	echo $_POST['firstname']. " " . $_POST['lastname']. " " . $_POST['address']. " " . $_POST['email']. " " . $_POST['password'] . "<br>";
+	$customer = customer($_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
 	}
 	
 
@@ -28,6 +30,7 @@ table, th, td {
     
 	<?php foreach ($login as $user) {
 		echo 'Welcome ' . $user['f_name'] . '!';
+		echo $email;
 	}	?>
   </tr>
 </table>

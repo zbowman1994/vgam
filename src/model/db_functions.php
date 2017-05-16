@@ -10,8 +10,11 @@
  * @return void 
  */
 function customer($firstname, $lastname, $address, $email, $password) {
+	echo 'inside the insert function<br>';
+	echo $firstname. " " .$lastname. " " .$address. " " .$email. " " .$password. '<br>';
     global $dbc;
     $password = password_hash($password, PASSWORD_DEFAULT);
+	echo $password . ' pass after hash';
     $query = 'INSERT INTO customer(f_name, l_name, address, email, password) 
 			  VALUES (:firstname, :lastname, :address, :email, :password)';
     $statement = $dbc->prepare($query);
