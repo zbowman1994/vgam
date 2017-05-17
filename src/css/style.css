@@ -10,8 +10,7 @@ header, footer {
     font-family: 'black-ops-one';
     background-color: cornflowerblue;
     clear: left;
-    text-align: center;
-    
+    text-align: center;  
 }
 
 p {
@@ -49,7 +48,7 @@ button {
     border-style: outset;
     border-radius: 8px;
     border: 2px black solid;
-    padding: 20px 125px;
+    padding: 20px 75px;
     background-color: white;
 	
 }
@@ -138,13 +137,29 @@ h3 {
 }
 
 input[type=submit] {
-	    font-family: Arial, sans-serif;
-        width: 25%;
-        padding: 10px 18px;
-        background-color: #4CAF50;
+	font-family: Arial, sans-serif;
+    width: 25%;
+    padding: 10px 18px;
+    background-color: #4CAF50;
 }
 
 input[type=text] {
-	    font-family: Arial, sans-serif;
+	font-family: Arial, sans-serif;
 }
 
+tbody {
+	font-family: Arial, sans-serif;
+}
+
+button[type=submit] {
+    width: auto;
+    padding: 10px 18px;
+    background-color: white;
+}
+
+footer {
+	font-family: Arial, sans-serif;
+	text-align: center;
+    font-size: 24px;
+	color: black;
+}

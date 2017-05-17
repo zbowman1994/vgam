@@ -1,8 +1,10 @@
 <link rel="stylesheet" type ="text/css" href="css/style.css" >     
 <!-- END SPECIFIC PAGE CONTENT -->
-</div> <!-- end container row --
+</div> 
+<footer>
 <p class="copyright">&copy; <?php echo date("Y"); ?> Camosun College</p>
-</div> <!-- end container -->
+</footer>
+</div> 
 <!-- The below two script entries load JavaScript into the page. Bootstrap requires both its own
     JavaScript library and JQuery, another JavaScript library. We use a CDN here (Content Delivery Network)
     to load these. Using a CDN means getting it from a 3rd party server to reduce load on our website
