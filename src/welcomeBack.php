@@ -10,9 +10,10 @@ $usrEmail = $_POST['email'];
 $sessionId = $_SESSION['count'];
 
 
-	$customer = customer($_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
-		$verify = login($usrEmail);
-	
+$customer = customer($sessionId, $_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
+$verify = login($usrEmail);
+$cart = getCart();
+$total = getTotal();	
 	
 
 ?>
@@ -46,6 +47,21 @@ table, th, td {
 	}}
 	?>
   </tr>
+  <?php foreach ($cart as $item) { ?>
+        <tr>
+                <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
+                <td>$<?php echo $item['product_price']; ?></td>
+                <td><?php echo $item['quantity']; ?></td>
+                </tr>
+        
+   <?php } ?> 
+</tr>   
+    <tr>
+        <?php foreach ($total as $amount) { ?> 
+            <td>Subtotal:  $<?php echo $amount['total']; ?></td>
+            <td>Total:  $<?php echo(round(($amount['total'] * 0.15 + $amount['total']), 2)); ?></td>
+        <?php } ?>
+		</tr>
 </table>
 <br><br><br>
 <?php require 'view/footer.php'; ?>

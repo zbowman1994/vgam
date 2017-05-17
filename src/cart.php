@@ -2,9 +2,9 @@
 <?php
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
- $cartId = $_SESSION['count']; 
+ $sessionId = $_SESSION['count']; 
  echo $cartId . '<br>';
-addProduct($cartId, $_POST['product_id'], $_POST['quantity']);
+addProduct($sessionId, $_POST['product_id'], $_POST['quantity']);
 $cart = getCart();
 $total = getTotal();
 ?>

@@ -9,17 +9,18 @@
  *
  * @return void 
  */
-function customer($firstname, $lastname, $address, $email, $password) {
+function customer($sessionId, $firstname, $lastname, $address, $email, $password) {
 	global $dbc;
     $password = password_hash($password, PASSWORD_DEFAULT);
-    $query = 'INSERT INTO customer(f_name, l_name, address, email, password) 
-			  VALUES (:firstname, :lastname, :address, :email, :password)';
+    $query = 'INSERT INTO customer(session_id, f_name, l_name, address, email, password) 
+			  VALUES (:sessionId, :firstname, :lastname, :address, :email, :password)';
     $statement = $dbc->prepare($query);
     $statement->bindValue(':firstname', $firstname);
     $statement->bindValue(':lastname', $lastname);
     $statement->bindValue(':address', $address);
     $statement->bindValue(':email', $email);
     $statement->bindValue(':password', $password);
+	$statement->bindValue(':sessionId', $sessionId);
     $statement->execute();
     $statement->closeCursor();
 }
@@ -116,12 +117,12 @@ function getAllMiscItems() {
  * this is to be used in get cart to query db and return the items for display
  */
 
-function addProduct($cartId, $idp, $quantity) {
+function addProduct($sessionId, $idp, $quantity) {
     global $dbc;
     $query = 'INSERT INTO cart (cart_id, products_product_id, quantity, time) 
-	values (:cartId, :idp, :quantity, NOW())';
+	values (:sessionId, :idp, :quantity, NOW())';
     $statement = $dbc->prepare($query);
-	$statement->bindValue(':cartId', $cartId);
+	$statement->bindValue(':sessionId', $sessionId);
     $statement->bindValue(':idp', $idp);
     $statement->bindValue(':quantity', $quantity);
     $statement->execute();
