@@ -9,27 +9,28 @@
 
 
 <div>
+<br> <font face="arial" color="blue" size"25">Returning customers</font> <br>
 <form action="welcomeBack.php" method="post">
-<label for="email">Email</label>
+<label for="email"><br>Email:<br></label>
 <input type="text" name="email">
-<label for="password">Password</label>
-<input type="password" name="password">
+<label for="password"><br>Password:<br></label>
+<input type="password" name="password"><br>
 <button type="submit" name="login" id="userlogin">Login</button>
 </form>
 </div>
 <div class="container">
     <form action="welcomeBack.php" method= "post">
-        
-            <label for="firstname"><b>First Name:</b></label>
+			<br> <font face="arial" color="blue" size"25">New customers</font> <br>
+            <label for="firstname"><b><br>First Name:<br></b></label>
             <input type="text" placeholder="Your First Name.." id="firstname" name="firstname" required>
-            <label for="lastname"><b>Last Name:</b></label>
+            <label for="lastname"><b><br>Last Name:<br></b></label>
             <input type="text" placeholder="Your Last Name.." id="lastname" name="lastname" required>      
-            <label for="address"><b>Address:</b></label>
+            <label for="address"><b><br>Address:<br></b></label>
             <input type="text" placeholder="Your Address.." id="address" name="address">
-            <label for="email"><b>Email:</b></label>
+            <label for="email"><b><br>Email:<br></b></label>
             <input type="text" placeholder="Your Email.." id="email" name="email" required>
-            <label for="password"><b>Password:</b></label>
-            <input type="password" placeholder="Your password.." id="password" name="password" required>
+            <label for="password"><b><br>Password:<br></b></label>
+            <input type="password" placeholder="Enter new password.." id="password" name="password" required><br>
             <button type="submit" name="register" id="userlogin">Register</button>
             
         </div>
