@@ -30,11 +30,9 @@
             <label for="password"><b>Password:</b></label>
             <input type="password" placeholder="Your password.." id="password" name="password" required>
             <button type="submit" name="register" id="userlogin">Register</button>
-            <input type="checkbox" checked="checked"> Remember Me
+            
         </div>
         
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
+           </div>
     </form>
 	<?php require 'view/footer.php'; ?>

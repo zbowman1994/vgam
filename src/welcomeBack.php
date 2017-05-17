@@ -17,7 +17,7 @@ $usrEmail = $_POST['email'];
 ?>
 <button type="button" id="products"><a href = "productSelection.php">Products</a></button>
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
-
+<button type="button" id="contactus"><a href = "login.php">Back to login</a></button>
 <style>
 table, th, td {
     border: 1px solid black;
