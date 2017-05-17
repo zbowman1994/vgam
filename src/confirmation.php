@@ -1,5 +1,8 @@
-
-<?php require 'view/header.html'; ?>
+<?php 
+session_start();
+require 'view/header.html'; 
+$sessionId = $_SESSION['count'];
+?>
   <body>
 
     <div class="container">
@@ -12,7 +15,7 @@
                 
                 <button type="button" id="contactus"><a href="contact.php">Contact Us</a>
                 <button type="button" id="products"><a href="productSelection.php">Products</a>
-               <button type="button" id="cart"><a href="cart.php">Back To Cart</a>
+              
     
       </div>
 

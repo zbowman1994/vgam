@@ -1,7 +1,6 @@
 <?php
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
-// Get products from db
 $products = getAllWiiGames();
 ?>
 <button type="button"><a href = "cart.php">Link to cart</a></button>

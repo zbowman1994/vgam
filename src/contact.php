@@ -1,9 +1,8 @@
-<link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <?php require 'view/header.html'; ?>
-
+<link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
 
-<?php require 'view/footer.php'; ?>
+
 <h3>Contact Form</h3>
 <div class="container">
     <form action="contactSubmit.php">
@@ -24,3 +23,4 @@
 </div>
 
 
+<?php require 'view/footer.php'; ?>
