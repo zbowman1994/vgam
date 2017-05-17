@@ -6,7 +6,7 @@
 
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
 <button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
-<button type="button" id=""><a>TODO: complete purchase</a></button>
+
 
 <div>
 <form action="welcomeBack.php" method="post">
