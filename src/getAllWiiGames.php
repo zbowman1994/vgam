@@ -43,4 +43,3 @@ $products = getAllWiiGames();
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
 <button type="button"><a href = "getAllMiscItems.php">Misc Items</a></button>
 <button type="button"><a href = "contact.php">Contact us</a></button>
-<button type="button"><a href = "login.php">Login</a></button>
