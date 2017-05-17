@@ -1,7 +1,10 @@
+<?php session_start(); ?>
 <?php
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
-addProduct($_POST['product_id'], $_POST['quantity']);
+ $cartId = $_SESSION['count']; 
+ echo $cartId . '<br>';
+addProduct($cartId, $_POST['product_id'], $_POST['quantity']);
 $cart = getCart();
 $total = getTotal();
 ?>

@@ -18,7 +18,7 @@
 </div>
 <div class="container">
     <form action="welcomeBack.php" method= "post">
-        <div class="container">
+        
             <label for="firstname"><b>First Name:</b></label>
             <input type="text" placeholder="Your First Name.." id="firstname" name="firstname" required>
             <label for="lastname"><b>Last Name:</b></label>
@@ -33,6 +33,5 @@
             
         </div>
         
-           </div>
     </form>
 	<?php require 'view/footer.php'; ?>

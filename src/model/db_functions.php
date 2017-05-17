@@ -116,11 +116,12 @@ function getAllMiscItems() {
  * this is to be used in get cart to query db and return the items for display
  */
 
-function addProduct($idp, $quantity) {
+function addProduct($cartId, $idp, $quantity) {
     global $dbc;
-    $query = 'INSERT INTO cart (products_product_id, quantity, time) 
-	values (:idp, :quantity, NOW())';
+    $query = 'INSERT INTO cart (cart_id, products_product_id, quantity, time) 
+	values (:cartId, :idp, :quantity, NOW())';
     $statement = $dbc->prepare($query);
+	$statement->bindValue(':cartId', $cartId);
     $statement->bindValue(':idp', $idp);
     $statement->bindValue(':quantity', $quantity);
     $statement->execute();
