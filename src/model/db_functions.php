@@ -1,13 +1,7 @@
 <?php
 
 /**
- * This function takes in a first and last name
- * and stores it in the database
- *
- * @param string $firstName - the firstName the user entered in the form.
- * @param string $lastName - the lastName the user enterd in the form.
- *
- * @return void 
+ * This function generates customer database
  */
 function customer($sessionId, $firstname, $lastname, $address, $email, $password) {
 	global $dbc;
@@ -23,33 +17,6 @@ function customer($sessionId, $firstname, $lastname, $address, $email, $password
 	$statement->bindValue(':sessionId', $sessionId);
     $statement->execute();
     $statement->closeCursor();
-}
-
-function confirm($email) {
-    
-global $dbc;
-$query= 'SELECT f_name, l_name, email, address, FROM customer where email = email';
-$statement = $dbc->prepare($query);
-$statement->bindValue(':email', $email);
-$client = $statement->fetchAll();
-$statement->closeCursor();
-return $client;
-
-}
-/**
- * This function generates the result set of
- * the tblNames table.
- *
- * @return array $names - an assoc. array which contains all the names stored in the DB.
- */
-function getAllNames() {
-    global $dbc;
-    $query = 'SELECT * from customer ORDER BY l_name';
-    $statement = $dbc->prepare($query);
-    $statement->execute();
-    $names = $statement->fetchAll();
-    $statement->closeCursor();
-    return $names;
 }
 
 /*
@@ -134,11 +101,13 @@ function addProduct($sessionId, $idp, $quantity) {
  * product in the shopping cart and returns them
  */
 
-function getCart() {
+function getCart($sessionId) {
     global $dbc;
     $query = 'SELECT cart_id, product_id, product_name, product_price, quantity from products
-	INNER JOIN cart ON products.product_id = cart.products_product_id';
+	INNER JOIN cart ON products.product_id = cart.products_product_id
+	WHERE cart.customer_session_id = :sessionId';
     $statement = $dbc->prepare($query);
+	$statement->bindValue(':sessionId', $sessionId);
     $statement->execute();
     $cart = $statement->fetchAll();
     $statement->closeCursor();
@@ -148,17 +117,22 @@ function getCart() {
 /* Retrieve total of all products in cart need to add quantity fror running total
  */
 
-function getTotal() {
+function getTotal($sessionId) {
     global $dbc;
     $query = 'SELECT SUM(product_price * quantity) as total from products
-	INNER JOIN cart ON products.product_id = cart.products_product_id';
+	INNER JOIN cart ON products.product_id = cart.products_product_id
+	WHERE cart.customer_session_id = :sessionId';
     $statement = $dbc->prepare($query);
+	$statement->bindValue(':sessionId', $sessionId);
     $statement->execute();
     $total = $statement->fetchAll();
     $statement->closeCursor();
     return $total;
 }
 
+/*
+ * function to retireive user credentials then verify them
+ */
 function login($email) {
 	global $dbc;
     $query = 'SELECT f_name, email, password FROM customer WHERE email = :email';

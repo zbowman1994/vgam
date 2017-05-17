@@ -1,15 +1,7 @@
-<link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <?php require 'view/header.html'; ?>
+<link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <button type="button" id="products"><a href = "productSelection.php">Products</a></button>
 
-
-<style>
-table, th, td {
-    border: 1px solid black;
-	border-collapse: collapse;
-	padding: 20px;
-}
-</style>
 <br><br><br>
 <table align="center">
   <tr>
