@@ -119,7 +119,7 @@ function getAllMiscItems() {
 
 function addProduct($sessionId, $idp, $quantity) {
     global $dbc;
-    $query = 'INSERT INTO cart (cart_id, products_product_id, quantity, time) 
+    $query = 'INSERT INTO cart (customer_session_id, products_product_id, quantity, time) 
 	values (:sessionId, :idp, :quantity, NOW())';
     $statement = $dbc->prepare($query);
 	$statement->bindValue(':sessionId', $sessionId);
