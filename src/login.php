@@ -1,3 +1,4 @@
+
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <?php require 'view/header.html'; 
 
@@ -5,7 +6,7 @@
 
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
 <button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
-
+<button type="button" id=""><a>TODO: complete purchase</a></button>
 
 <div>
 <form action="welcomeBack.php" method="post">
@@ -18,7 +19,7 @@
 </div>
 <div class="container">
     <form action="welcomeBack.php" method= "post">
-        <div class="container">
+        
             <label for="firstname"><b>First Name:</b></label>
             <input type="text" placeholder="Your First Name.." id="firstname" name="firstname" required>
             <label for="lastname"><b>Last Name:</b></label>
@@ -30,11 +31,8 @@
             <label for="password"><b>Password:</b></label>
             <input type="password" placeholder="Your password.." id="password" name="password" required>
             <button type="submit" name="register" id="userlogin">Register</button>
-            <input type="checkbox" checked="checked"> Remember Me
+            
         </div>
         
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
     </form>
 	<?php require 'view/footer.php'; ?>

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <?php require 'view/header.html'; 
 require_once 'model/db_connect.php';
@@ -6,18 +7,19 @@ require_once 'model/db_functions.php';
 $usrPass = $_POST['password'];
 $usrEmail = $_POST['email'];
 
+$sessionId = $_SESSION['count'];
 
 
-
-	$customer = customer($_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
-		$verify = login($usrEmail);
-	
+$customer = customer($sessionId, $_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
+$verify = login($usrEmail);
+$cart = getCart();
+$total = getTotal();	
 	
 
 ?>
 <button type="button" id="products"><a href = "productSelection.php">Products</a></button>
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
-
+<button type="button" id="contactus"><a href = "login.php">Back to login</a></button>
 <style>
 table, th, td {
     border: 1px solid black;
@@ -45,6 +47,21 @@ table, th, td {
 	}}
 	?>
   </tr>
+  <?php foreach ($cart as $item) { ?>
+        <tr>
+                <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
+                <td>$<?php echo $item['product_price']; ?></td>
+                <td><?php echo $item['quantity']; ?></td>
+                </tr>
+        
+   <?php } ?> 
+</tr>   
+    <tr>
+        <?php foreach ($total as $amount) { ?> 
+            <td>Subtotal:  $<?php echo $amount['total']; ?></td>
+            <td>Total:  $<?php echo(round(($amount['total'] * 0.15 + $amount['total']), 2)); ?></td>
+        <?php } ?>
+		</tr>
 </table>
 <br><br><br>
 <?php require 'view/footer.php'; ?>

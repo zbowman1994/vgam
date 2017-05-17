@@ -1,12 +1,15 @@
+<?php session_start(); ?>
 <?php
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
-addProduct($_POST['product_id'], $_POST['quantity']);
+ $sessionId = $_SESSION['count']; 
+ echo $cartId . '<br>';
+addProduct($sessionId, $_POST['product_id'], $_POST['quantity']);
 $cart = getCart();
 $total = getTotal();
 ?>
 <button type="button"><a href = "productSelection.php">Continue shopping</a></button>
-<button type="button">Checkout</button>
+<button type="button"><a href="login.php">Checkout</a></button>
 <form action="deleteFromCart.php" method="get">
     <button type="submit"><input type="hidden" name="empty">Empty Cart</button>
 </form>
