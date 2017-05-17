@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
 <?php require 'view/header.html'; 
 require_once 'model/db_connect.php';
@@ -6,7 +7,7 @@ require_once 'model/db_functions.php';
 $usrPass = $_POST['password'];
 $usrEmail = $_POST['email'];
 
-
+$sessionId = $_SESSION['count'];
 
 
 	$customer = customer($_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);

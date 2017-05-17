@@ -1,7 +1,7 @@
-<?php session_start(); ?>
+
 <?php require 'view/header.html'; ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
-<?php echo $_SESSION['count']; ?>
+
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
 
 
