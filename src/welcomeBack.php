@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-require_once('vendor/config.php');
+require_once('config.php');
 require 'view/header.html'; 
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
@@ -53,6 +53,7 @@ $total = getTotal(sessionId);
 		<?php $cost = (round(($amount['total'] * 0.15 + $amount['total']), 2)); ?>
             <td>Subtotal:  $<?php echo $amount['total']; ?></td>
             <td>Total:  $<?php echo $cost; ?></td>
+			<?php $amount = $cost * 100; ?>
         <?php } ?>
 		</tr>
 </table>
@@ -62,9 +63,10 @@ $total = getTotal(sessionId);
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<?php echo $stripe['publishable_key']; ?>"
           data-description="Payment checkout"
-          data-amount="<?php $cost * 100; ?>" 
+          data-amount="<?php echo $amount; ?>" 
           data-locale="auto"></script>
-		  <input type="hidden" name="amount" value="data-amount">
+		  <input type="hidden" name="amount"value="<?php echo $amount; ?>">
+		 
 </form>
 <!--amount for the cart data amount-->
 <br><br><br>
