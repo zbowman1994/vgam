@@ -3,11 +3,14 @@ require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
 $products = getAllProducts();
 ?>
+<?php require 'view/header.html'; ?>
+<link rel="stylesheet" type ="text/css" href="css/style.css" > 
+
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
 <button type="button"><a href = "getAllMiscItems.php">Misc. Items</a></button>
-<button type="button"><a href = "contact.php">Contact us</a></button>
+<button type="button"><a href = "contact.php">Contact us</a></button><br><br><br>
 
 <table class="table table-bordered table-striped" id="names">
     <thead>
@@ -37,9 +40,11 @@ $products = getAllProducts();
     <?php } ?>
 </tbody>
 </table>
+<br><br>
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
 <button type="button"><a href = "getAllMiscItems.php">Misc Items</a></button>
 <button type="button"><a href = "contact.php">Contact us</a></button>
 
+<?php require 'view/footer.php'; ?>

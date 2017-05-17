@@ -7,6 +7,9 @@ addProduct($sessionId, $_POST['product_id'], $_POST['quantity']);
 $cart = getCart($sessionId);
 $total = getTotal($sessionId);
 ?>
+<?php require 'view/header.html'; ?>
+<link rel="stylesheet" type ="text/css" href="css/style.css" > 
+
 <button type="button"><a href = "productSelection.php">Continue shopping</a></button>
 <button type="button"><a href="login.php">Checkout</a></button>
 <form action="deleteFromCart.php" method="get">
@@ -43,3 +46,5 @@ $total = getTotal($sessionId);
     </tr>
 </tbody>
 </table>
+
+<?php require 'view/footer.php'; ?>
