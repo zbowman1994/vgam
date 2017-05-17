@@ -6,7 +6,7 @@ $cart = getCart();
 $total = getTotal();
 ?>
 <button type="button"><a href = "productSelection.php">Continue shopping</a></button>
-<button type="button">Checkout</button>
+<button type="button"><a href="login.php">Checkout</a></button>
 <form action="deleteFromCart.php" method="get">
     <button type="submit"><input type="hidden" name="empty">Empty Cart</button>
 </form>

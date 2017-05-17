@@ -5,5 +5,5 @@
 
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
 <button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
-<button type="button" id="login"><a href = "login.php">Login</a></button>
+
 <?php require 'view/footer.php'; ?>
