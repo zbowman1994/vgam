@@ -63,7 +63,8 @@ table#cart {
 	font-family: Tahoma, Geneva, sans-serif;
 }
 label#returningCustomers {
-	color: red;
+	color: cornflowerblue;
+    font-size: 100px;
 }
 label#email {
 	color: red;
