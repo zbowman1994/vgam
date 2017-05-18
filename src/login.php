@@ -10,7 +10,7 @@
 
 <div>
 <br> <font face="arial" color="blue" size"25">Returning customers</font> <br>
-<form action="welcomeBack.php" method="post">
+<form action="loginVerify.php" method="post">
 <label for="email"><br>Email:<br></label>
 <input type="text" name="email">
 <label for="password"><br>Password:<br></label>
@@ -19,7 +19,7 @@
 </form>
 </div>
 <div class="container">
-    <form action="welcomeBack.php" method= "post">
+    <form action="loginVerify.php" method= "post">
 			<br> <font face="arial" color="blue" size"25">New customers</font> <br>
             <label for="firstname"><b><br>First Name:<br></b></label>
             <input type="text" placeholder="Your First Name.." id="firstname" name="firstname" required>
