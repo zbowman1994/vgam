@@ -78,7 +78,6 @@ button#mainPage {
     font-size: 40px;
     
 }
-<<<<<<< 272965176fbf69266f8b297f68e95807e0cb42b0
 button#continueShopping {
 	color: red;
 	font-size: 20px;
@@ -101,16 +100,13 @@ button#update {
 button#delete {
 	color: red;
 	font-size: 20px;
-=======
+}
 button#wii {
      font-size: 30px;
 }
-
 button#playstationGames {
     font-size: 30px;
 }
-button#miscItems {
-    
+button#miscItems {   
     font-size: 30px;
->>>>>>> css
 }
