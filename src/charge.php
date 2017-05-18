@@ -7,7 +7,7 @@ require('PHPMailer/PHPMailerAutoload.php');
 require_once('config.php');
 $sessionId = $_SESSION['count'];
 $cart = getCart($sessionId);
-$total = getTotal(sessionId);
+$total = getTotal($sessionId);
 
     
 $token  = filter_input(INPUT_POST, 'stripeToken', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -19,15 +19,16 @@ $mail = new PHPMailer; // create a new object
 $mail->IsSMTP(); // enable SMTP
 $mail->SMTPDebug = 0; // debugging: 1 = errors and messages, 2 = messages only
 $mail->SMTPAuth = true; // authentication enabled
-$mail->SMTPSecure = 'tls'; // secure transfer enabled REQUIRED for Gmail
+$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 $mail->Host = "smtp.gmail.com";
-$mail->Port = 587; // 465 or doesnt like 587
+$mail->Port = 465; // 465 or doesnt like 587
 $mail->IsHTML(true);
 $mail->Username = "ics199grp00@gmail.com";
 $mail->Password = "ics199vgam";
 $mail->SetFrom("ics199grp00@gmail.com");
-$mail->Subject = "its working for gmail";
-$mail->Body = "hello worked with ssl 465 trying with tls 587.";
+$mail->Subject = "";
+$mail->msgHTML(file_get_contents('confirmationEmail.html'), dirname(__FILE__));
+//$mail->Body = "";
 $mail->AddAddress($email);
 
  if(!$mail->Send()) {

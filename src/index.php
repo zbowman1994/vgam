@@ -10,6 +10,7 @@ if (!isset($_SESSION['count'])){
 <link rel="stylesheet" type ="text/css" href="css/style.css" >
 
 <form action="productSelection.php" method="post">
-<button type="button" name="enter" id="products"><a href = "productSelection.php">Experience greatness!</a></button>
+<button type="button" name="enter" id="mainPage"><a href = "productSelection.php">Experience greatness!</a></button>
 </form>
+
 <?php require 'view/footer.php'; ?>
