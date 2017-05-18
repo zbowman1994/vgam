@@ -16,6 +16,7 @@ body {
 p#footer{
 	bottom: 0;
 	margin: 3px auto;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 button {
     font-family: Tahoma, Geneva, sans-serif;
@@ -28,6 +29,12 @@ button {
 table {
 	margin-left: auto;
 	margin-right: auto;
+}
+table#total {
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 table#wiiGames {
 	background-color: black;
@@ -48,6 +55,8 @@ table#getAllMiscItems {
 table#cart {
 	background-color: black;
 	color: cornflowerblue;
+	font-size: 20px;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 label#returningCustomers {
 	color: red;
@@ -61,12 +70,10 @@ label#password {
 button#userLogin {
 	color: red;
 }
-<<<<<<< HEAD
 button#mainPage {
     font-size: 40px;
     
 }
-=======
 button#continueShopping {
 	color: red;
 	font-size: 20px;
@@ -90,5 +97,3 @@ button#delete {
 	color: red;
 	font-size: 20px;
 }
-
->>>>>>> Css cart changes
