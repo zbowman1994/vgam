@@ -15,7 +15,7 @@ $total = getTotal($sessionId);
 <form action="deleteFromCart.php" method="get">
     <button type="submit"><input type="hidden" name="empty">Empty Cart</button>
 </form>
-<table>
+<table id="cart">
     <thead>
         <tr>
             <th scope="col">Name</th>

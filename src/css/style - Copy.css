@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+div.container {
+    /*border: 1px solid gray;*/
+}
+
+header, footer {
+    padding: 6 em;
+    color: black;
+    font-family: 'black-ops-one';
+    background-color: cornflowerblue;
+    clear: left;
+    text-align: center;  
+}
+
+p {
+    font-family: 'black-ops-one';
+
+}
+
+h1 { 
+    font-family: 'Impact';
+    margin-top: -15px;
+    font-size: 100px;
+}
+
+body {
+    background-image: url(images/videogame.jpg); 
+    background-repeat: no-repeat; 
+    background-position: 50% 50%; 
+    background-attachment:fixed; 
+    color: #000000; 
+    margin: 0; 
+}
+
+/* give the links a bit of styling */
+a:link { font-size: 30px; }
+a:hover { font-weight: bold; }
+
+/* Make the caption stand out for the table */
+caption {
+    text-align: center;
+    font-size: 24px;
+}
+
+button {
+    font-family: Tahoma, Geneva, sans-serif;
+    border-style: outset;
+    border-radius: 8px;
+    border: 2px black solid;
+    padding: 20px 75px;
+    background-color: white;
+	
+}
+
+#allproducts {
+    width: 1000px;
+    height: 150px;
+    font-size: 20px;
+
+}
+
+#wiigames {
+    border: 2px black solid;
+    padding: 20px 125px;
+    background-color: white;
+
+}
+
+input[type=text], select, textarea {
+	font-family: Arial, sans-serif;
+    width: 25%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+
+/*changes backgroud on user login to white
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}*/
+
+a {
+    text-decoration: none;
+}
+-----------------------------------------------------------------------------------
+
+ form {
+        border: 3px solid #f1f1f1;		
+    }
+    input[type=text], input[type=password] {
+        width: 25%;
+        padding: 5px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    #userlogin{
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 25%;
+    }
+    button:hover {
+        opacity: 0.8;
+    }
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+    .container {
+        padding: 16px;
+    }
+    span.psw {
+        float: left;
+        padding-top: 16px;
+    }
+	
+label {
+	font-family: Arial, sans-serif;
+}
+
+h3 {
+	font-family: Arial, sans-serif;
+}
+
+input[type=submit] {
+	font-family: Arial, sans-serif;
+    width: 25%;
+    padding: 10px 18px;
+    background-color: #4CAF50;
+}
+
+input[type=text] {
+	font-family: Arial, sans-serif;
+}
+
+tbody {
+	font-family: Arial, sans-serif;
+}
+
+button[type=submit] {
+    width: auto;
+    padding: 10px 18px;
+    background-color: white;
+}
+
+footer {
+	font-family: Arial, sans-serif;
+	text-align: center;
+    font-size: 24px;
+	color: black;
+}

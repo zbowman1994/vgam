@@ -66,5 +66,5 @@ function updateQuantity($prodId, $qty) {
 <p> Success! What would you like to do now? </p>
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "productSelection.php">Product Selection</a></button>
-<button type="button"><a href = "index.php">Main</a></button>
+
 <?php require 'view/footer.php'; ?>
