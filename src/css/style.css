@@ -61,3 +61,7 @@ label#password {
 button#userLogin {
 	color: red;
 }
+button#mainPage {
+    font-size: 40px;
+    
+}
