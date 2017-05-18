@@ -14,8 +14,12 @@ body {
 	text-align: center;
 }
 p#footer{
-	bottom: 0;
-	margin: 3px auto;
+    padding-top: 3px; 
+    position: absolute;
+    height: 20px;
+    margin-bottom: 0;
+    bottom: 0;
+    width: 100%;
 	font-family: Tahoma, Geneva, sans-serif;
 }
 button {
@@ -153,4 +157,31 @@ button#playstationGames {
 }
 button#miscItems {   
     font-size: 30px;
+}
+input#submitContact { 
+	font-family: Tahoma, Geneva, sans-serif;  
+    color: cornflowerblue;
+	font-size: 20px;
+}
+form#contact {
+	background-color: white;
+	width: 15%;
+	padding: 15px 20px;
+	display: inline-block;
+    text-align: center;
+	background-color: black;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+form#thankYou {
+	padding: 15px 20px;
+	display: inline-block;
+    text-align: center;
+	background-color: black;
+	color: cornflowerblue;
+    font-size: 25px;
+    font-family: Tahoma, Geneva, sans-serif;
+	border-style: groove;
+	border-color: cornflowerblue;
 }
