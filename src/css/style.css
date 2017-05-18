@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat; 
     background-position: 50% 50%; 
     background-attachment:fixed; 
-    color: red; 
+    color: cornflowerblue; 
     margin: 0; 
 	text-align: center;
 }
@@ -60,4 +60,8 @@ label#password {
 }
 button#userLogin {
 	color: red;
+}
+button#mainPage {
+    font-size: 40px;
+    
 }
