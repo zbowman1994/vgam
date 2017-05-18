@@ -38,6 +38,8 @@ $total = getTotal($sessionId);
 </table>
 
 
+
+<!--------- DONT TOUCH BELOW THIS LINE ITS FOR STRIPE ------->
 <form action="charge.php" method="post">
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<?php echo $stripe['publishable_key']; ?>"
@@ -49,6 +51,9 @@ $total = getTotal($sessionId);
 		  <input type="hidden" name="amount"value="<?php echo $amount; ?>">
 		 
 </form>
+<!---------- DONT TOUCH ABOVE THIS LINE FOR STRIPE -------------->
+
+
 <!--amount for the cart data amount-->
 <br><br><br>
 <?php require 'view/footer.php'; ?>
