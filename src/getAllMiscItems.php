@@ -13,7 +13,7 @@ $products = getAllMiscItems();
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
 <button type="button"><a href = "contact.php">Contact us</a></button><br><br><br>
 
-<table class="table table-bordered table-striped" id="names">
+<table id="getAllMiscItems">
     <thead>
         <tr>
             <th scope="col">Product Image</th>
