@@ -16,6 +16,7 @@ body {
 p#footer{
 	bottom: 0;
 	margin: 3px auto;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 button {
     font-family: Tahoma, Geneva, sans-serif;
@@ -28,6 +29,12 @@ button {
 table {
 	margin-left: auto;
 	margin-right: auto;
+}
+table#total {
+	background-color: black;
+	color: white;
+	font-size: 30px;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 table#wiiGames {
 	background-color: black;
@@ -47,7 +54,9 @@ table#getAllMiscItems {
 }
 table#cart {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
+	font-size: 20px;
+	font-family: Tahoma, Geneva, sans-serif;
 }
 label#returningCustomers {
 	color: red;
@@ -64,4 +73,27 @@ button#userLogin {
 button#mainPage {
     font-size: 40px;
     
+}
+button#continueShopping {
+	color: red;
+	font-size: 20px;
+}
+a:visited {
+	color: cornflowerblue;
+}
+button#checkout {
+	color: red;
+	font-size: 20px;
+}
+button#emptyCart {
+	color: cornflowerblue;
+	font-size: 20px;
+}
+button#update {
+	color: cornflowerblue;
+	font-size: 20px;
+}
+button#delete {
+	color: red;
+	font-size: 20px;
 }
