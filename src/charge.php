@@ -26,15 +26,20 @@ $mail->IsHTML(true);
 $mail->Username = "ics199grp00@gmail.com";
 $mail->Password = "ics199vgam";
 $mail->SetFrom("ics199grp00@gmail.com");
-$mail->Subject = "";
-$mail->msgHTML(file_get_contents('confirmationEmail.html'), dirname(__FILE__));
-//$mail->Body = "";
+$mail->Subject = "test";
+//this works for a foreach loop
+
+$mail->Body = "<h1> hello </h1>";
+foreach ($cart as $item) {
+$mail->Body .= $item['product_name'].' ' . $item['product_price']. ' ' . $item['quantity'];
+}
+$mail->Body .= "Thanks for shopping"; 
 $mail->AddAddress($email);
 
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
-    echo "Message has been sent";
+    echo "You will recieve a confirmation email shortly";
  }
 	
 	$customer = \Stripe\Customer::create(array(
@@ -56,6 +61,7 @@ $mail->AddAddress($email);
 </tr>
   <?php foreach ($cart as $item) { ?>
         <tr>
+			<?php $product = $item['product_name'].' ' . $item['product_price']. ' ' . $item['quantity']; ?>
                 <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
                 <td>$<?php echo $item['product_price']; ?></td>
                 <td><?php echo $item['quantity']; ?></td>
