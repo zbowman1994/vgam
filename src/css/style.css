@@ -25,7 +25,7 @@ button {
     border: 2px black solid;
     padding: 20px 75px;
     background-color: white;
-    font-size: 30px;
+    font-size: 15px;
 }
 table {
 	margin-left: auto;
@@ -78,7 +78,7 @@ button#mainPage {
     font-size: 40px;
     
 }
-<<<<<<< 272965176fbf69266f8b297f68e95807e0cb42b0
+
 button#continueShopping {
 	color: red;
 	font-size: 20px;
@@ -101,7 +101,7 @@ button#update {
 button#delete {
 	color: red;
 	font-size: 20px;
-=======
+
 button#wii {
      font-size: 30px;
 }
@@ -112,5 +112,5 @@ button#playstationGames {
 button#miscItems {
     
     font-size: 30px;
->>>>>>> css
+
 }
