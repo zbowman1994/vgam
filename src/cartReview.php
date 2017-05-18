@@ -44,7 +44,8 @@ $total = getTotal($sessionId);
           data-description="Payment checkout"
           data-amount="<?php echo $amount; ?>" 
           data-locale="auto"
-		  data-currency="cad"></script>
+		  data-currency="cad"
+		  data-email="<?php echo $usrEmail ?>"></script>
 		  <input type="hidden" name="amount"value="<?php echo $amount; ?>">
 		 
 </form>
