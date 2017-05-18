@@ -39,11 +39,15 @@ table#total {
 }
 table#wiiGames {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 table#playstationGames {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 table#allProducts {
 	background-color: black;
@@ -54,7 +58,9 @@ table#allProducts {
 }
 table#getAllMiscItems {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
 }
 table#cart {
 	background-color: black;
