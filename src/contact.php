@@ -3,7 +3,7 @@
 <button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
 
 
-<br>
+<br><br>
     <form action="contactSubmit.php" id="contact">
 	<h2>Contact Form</h2>
         <label for="fname"></label>First Name<br>
