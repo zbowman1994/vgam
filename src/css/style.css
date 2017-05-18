@@ -62,17 +62,56 @@ table#cart {
 	font-size: 20px;
 	font-family: Tahoma, Geneva, sans-serif;
 }
-label#returningCustomers {
-	color: red;
+label#returningCustomer {
+	color: cornflowerblue;
+    font-size: 30px;
 }
+label#newCustomers {
+    color: cornflowerblue;
+    font-size: 30px;
+}
+label#firstName {
+    color: cornflowerblue;
+    font-size: 20px;
+    
+}
+label#lastName {
+    color: cornflowerblue;
+    font-size: 20px;
+    
+}
+label#address {
+    color: cornflowerblue;
+    font-size: 20px;
+}
+
+
 label#email {
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
+}
+div#login{
+    
+    margin: auto;
+    width: 15%;
+    border: 3px black;
+    padding: 15px 20px;
+    background-color: black;  
+}
+div#newCustomer {
+    
+    margin: auto;
+    width: 15%;
+    border: 3px black;
+    padding: 15px 20px;
+    background-color: black;
 }
 label#password {
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
 }
 button#userLogin {
-	color: red;
+	color: cornflowerblue;
 }
 button#mainPage {
     font-size: 40px;

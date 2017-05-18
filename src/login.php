@@ -8,28 +8,28 @@
 <button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button>
 
 
-<div>
-<br> <label id="returningCustomer">Returning customers</label> <br>
+<div id ="login">
+<br> <label id="returningCustomer">Returning Customer</label> <br>
 <form action="loginVerify.php" method="post">
-<label for="email" id="email"><br>Email:<br></label>
+    <label for="email" id="email"><b><br>Email:<br></b></label>
 <input type="text" name="email">
-<label for="password" id="password"><br>Password:<br></label>
+    <label for="password" id="password"><b><br>Password:<br></b></label>
 <input type="password" name="password"><br>
 <button type="submit" name="login" id="userLogin">Login</button>
 </form>
-</div>
-<div class="container">
+</div> <br>
+<div id= newCustomer>
     <form action="loginVerify.php" method= "post">
-			<br> <font face="arial" color="blue" size"25">New customers</font> <br>
-            <label for="firstname"><b><br>First Name:<br></b></label>
+        <br> <label id="newCustomers">New Customer</label> <br>
+            <label for="firstname" id="firstName"><b><br>First Name:<br></b></label>
             <input type="text" placeholder="Your First Name.." id="firstName" name="firstname" required>
-            <label for="lastname"><b><br>Last Name:<br></b></label>
+            <label for="lastname" id="lastName"><b><br>Last Name:<br></b></label>
             <input type="text" placeholder="Your Last Name.." id="lastname" name="lastname" required>      
-            <label for="address"><b><br>Address:<br></b></label>
+            <label for="address" id="address"><b><br>Address:<br></b></label>
             <input type="text" placeholder="Your Address.." id="address" name="address">
-            <label for="email"><b><br>Email:<br></b></label>
+            <label for="email" id="email"><b><br>Email:<br></b></label>
             <input type="text" placeholder="Your Email.." id="email" name="email" required>
-            <label for="password"><b><br>Password:<br></b></label>
+            <label for="password" id="password"><b><br>Password:<br></b></label>
             <input type="password" placeholder="Enter new password.." id="password" name="password" required><br>
             <button type="submit" name="register" id="userlogin">Register</button>
             
