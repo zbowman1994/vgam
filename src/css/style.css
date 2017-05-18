@@ -120,13 +120,8 @@ button#userLogin {
 	color: cornflowerblue;
 }
 button#mainPage {
-    font-size: 40px;
-    
+    font-size: 40px;  
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 button#continueShopping {
 	color: red;
 	font-size: 20px;
@@ -149,11 +144,7 @@ button#update {
 button#delete {
 	color: red;
 	font-size: 20px;
-<<<<<<< HEAD
 }
-=======
-
->>>>>>> origin/master
 button#wii {
      font-size: 30px;
 }
@@ -162,8 +153,4 @@ button#playstationGames {
 }
 button#miscItems {   
     font-size: 30px;
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
 }
