@@ -47,7 +47,7 @@ table#getAllMiscItems {
 }
 table#cart {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
 }
 label#returningCustomers {
 	color: red;
@@ -61,7 +61,34 @@ label#password {
 button#userLogin {
 	color: red;
 }
+<<<<<<< HEAD
 button#mainPage {
     font-size: 40px;
     
 }
+=======
+button#continueShopping {
+	color: red;
+	font-size: 20px;
+}
+a:visited {
+	color: cornflowerblue;
+}
+button#checkout {
+	color: red;
+	font-size: 20px;
+}
+button#emptyCart {
+	color: cornflowerblue;
+	font-size: 20px;
+}
+button#update {
+	color: cornflowerblue;
+	font-size: 20px;
+}
+button#delete {
+	color: red;
+	font-size: 20px;
+}
+
+>>>>>>> Css cart changes
