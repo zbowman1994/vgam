@@ -38,4 +38,3 @@ $verify = login($usrEmail);
 	}
 	?>
   </tr>
-<!--  <button type"button"><a href="cartReview.php">Proceed to payment</a></button> -->
