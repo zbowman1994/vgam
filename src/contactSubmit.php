@@ -3,10 +3,8 @@
 <button type="button" id="products"><a href = "productSelection.php">Products</a></button>
 
 <br><br><br>
-<table align="center">
-  <tr>
-    <th>Thank you for reaching out. We will get back to you as soon as we can.</th>
-  </tr>
-</table>
+<form id="thankYou">
+  <h2>Thank you for reaching out. We will get back to you as soon as we can.</h2>
+</form>
 <br><br><br>
 <?php require 'view/footer.php'; ?>

@@ -14,8 +14,9 @@ body {
 	text-align: center;
 }
 p#footer{
-	bottom: 0;
-	margin: 3px auto;
+	height: 50px; 
+	padding: 30px 0;
+	text-align: center;
 	font-family: Tahoma, Geneva, sans-serif;
 }
 button {
@@ -39,22 +40,32 @@ table#total {
 }
 table#wiiGames {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+	text-align: left;
 }
 table#playstationGames {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+	text-align: left;
 }
 table#allProducts {
 	background-color: black;
 	color: cornflowerblue;
     font-size: 20px;
     font-family: Tahoma, Geneva, sans-serif;
+	text-align: left;
     
 }
 table#getAllMiscItems {
 	background-color: black;
-	color: red;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+	text-align: left;
 }
 table#cart {
 	background-color: black;
@@ -114,10 +125,8 @@ button#userLogin {
 	color: cornflowerblue;
 }
 button#mainPage {
-    font-size: 40px;
-    
+    font-size: 40px;  
 }
-
 button#continueShopping {
 	color: red;
 	font-size: 20px;
@@ -140,16 +149,40 @@ button#update {
 button#delete {
 	color: red;
 	font-size: 20px;
-
+}
 button#wii {
      font-size: 30px;
 }
-
 button#playstationGames {
     font-size: 30px;
 }
-button#miscItems {
-    
+button#miscItems {   
     font-size: 30px;
-
+}
+input#submitContact { 
+	font-family: Tahoma, Geneva, sans-serif;  
+    color: cornflowerblue;
+	font-size: 20px;
+}
+form#contact {
+	background-color: white;
+	width: 15%;
+	padding: 15px 20px;
+	display: inline-block;
+    text-align: center;
+	background-color: black;
+	color: cornflowerblue;
+    font-size: 20px;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+form#thankYou {
+	padding: 15px 20px;
+	display: inline-block;
+    text-align: center;
+	background-color: black;
+	color: cornflowerblue;
+    font-size: 25px;
+    font-family: Tahoma, Geneva, sans-serif;
+	border-style: groove;
+	border-color: cornflowerblue;
 }

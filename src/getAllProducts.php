@@ -28,7 +28,7 @@ $products = getAllProducts();
         <form action="cart.php" method="post">
             <input type="hidden" name="product_id" value="<?php echo $product['product_id']; ?>">
             <tr>
-                <td><img src = "<?php echo $product['product_image']; ?>" height = "42" width = "42"></img></td>
+                <td><img src = "<?php echo $product['product_image']; ?>" height = "100" width = "100"></img></td>
                 <td><?php echo $product['product_name']; ?></td>
                 <td><?php echo $product['product_description']; ?></td>
                 <td>$<?php echo $product['product_price']; ?></td>
