@@ -3,7 +3,7 @@ session_start();
 require 'view/header.html'; 
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
-require('PHPMailer/PHPMailerAutoload.php');
+require_once 'vendor/autoload.php';
 require_once('config.php');
 $sessionId = $_SESSION['count'];
 $cart = getCart($sessionId);
