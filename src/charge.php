@@ -29,11 +29,15 @@ $mail->SetFrom("ics199grp00@gmail.com");
 $mail->Subject = "test";
 //this works for a foreach loop
 
-$mail->Body = "<h1> hello </h1>";
+$mail->Body = "Thank you for your purchase!<br>
+Here is a copy of your purchase. <br><table><th>Item</th><th>Price<tr>";
 foreach ($cart as $item) {
-$mail->Body .= $item['product_name'].' ' . $item['product_price']. ' ' . $item['quantity'];
+$mail->Body .= '<td>' . $item['product_name'].'</td><td>' . $item['product_price']. '</td><td>' . $item['quantity']. '</td></tr>';
 }
-$mail->Body .= "Thanks for shopping"; 
+$mail->Body .= "You total was <tr>";
+foreach ($total as $charge) { 
+$mail->Body .= '<td>' . (round(($charge['total'] * 0.15 + $charge['total']), 2)). '</td></tr></table>';
+}
 $mail->AddAddress($email);
 
  if(!$mail->Send()) {
@@ -61,7 +65,6 @@ $mail->AddAddress($email);
 </tr>
   <?php foreach ($cart as $item) { ?>
         <tr>
-			<?php $product = $item['product_name'].' ' . $item['product_price']. ' ' . $item['quantity']; ?>
                 <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
                 <td>$<?php echo $item['product_price']; ?></td>
                 <td><?php echo $item['quantity']; ?></td>
