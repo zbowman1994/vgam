@@ -186,3 +186,30 @@ form#thankYou {
 	border-style: groove;
 	border-color: cornflowerblue;
 }
+table#cartReview {
+	background-color: black;
+	font-size: 20px;
+}
+p#loginVerify {
+	font-size: 20px;
+	background-color: black;
+	padding: 10px;
+}
+
+p#wrongPass {
+	font-size: 20px;
+	background-color: black;
+	padding: 10px;
+}
+table#paymentSuccess {
+	background-color: black;
+	font-size: 20px;
+}
+p#mailMessage {
+	background-color: black;
+	font-size: 20px;
+}
+h2#success {
+	background-color: black;
+	font-size: 20px;
+}

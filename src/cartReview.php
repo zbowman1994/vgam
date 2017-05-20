@@ -36,8 +36,8 @@ $total = getTotal($sessionId);
         <?php } ?>
 		</tr>
 </table>
-
-
+<br>
+<br>
 
 <!--------- DONT TOUCH BELOW THIS LINE ITS FOR STRIPE ------->
 <form action="charge.php" method="post">
