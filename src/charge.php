@@ -26,17 +26,24 @@ $mail->IsHTML(true);
 $mail->Username = "ics199grp00@gmail.com";
 $mail->Password = "ics199vgam";
 $mail->SetFrom("ics199grp00@gmail.com");
-$mail->Subject = "test";
+$mail->Subject = "Thank you for your purchase!";
 //this works for a foreach loop
 
-$mail->Body = "Thank you for your purchase!<br>
-Here is a copy of your purchase. <br><table><th>Item</th><th>Price<tr>";
+$mail->Body = '<h1>Video Games and More</h1>';
+$mail->Body = '<p>Thank you for your purchase!</p>';
+$mail->Body = '<table align="center"><thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>	
+        </tr>
+    </thead><tbody';
 foreach ($cart as $item) {
-$mail->Body .= '<td>' . $item['product_name'].'</td><td>' . $item['product_price']. '</td><td>' . $item['quantity']. '</td></tr>';
+$mail->Body .= '<tr><td>' . $item['product_name'].'</td><td>' . $item['product_price']. '</td><td>' . $item['quantity']. '</td></tr>';
 }
-$mail->Body .= "You total was <tr>";
+$mail->Body .= 'You total was <tr>';
 foreach ($total as $charge) { 
-$mail->Body .= '<td>' . (round(($charge['total'] * 0.15 + $charge['total']), 2)). '</td></tr></table>';
+$mail->Body .= '<td>' . (round(($charge['total'] * 0.15 + $charge['total']), 2)). '</td></tr></tbody></table>';
 }
 $mail->AddAddress($email);
 

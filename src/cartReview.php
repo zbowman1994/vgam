@@ -17,7 +17,7 @@ $total = getTotal($sessionId);
 <button type="button" id="products"><a href = "cart.php">Back to cart</a></button>
 
 <br><br><br>
-<table align="center">
+<table align="center" id="cartReview">
   <?php foreach ($cart as $item) { ?>
         <tr>
                 <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
