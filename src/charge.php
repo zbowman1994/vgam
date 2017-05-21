@@ -26,20 +26,31 @@ $mail->IsHTML(true);
 $mail->Username = "ics199grp00@gmail.com";
 $mail->Password = "ics199vgam";
 $mail->SetFrom("ics199grp00@gmail.com");
-$mail->Subject = "test";
+$mail->Subject = "Thank you for your purchase!";
 //this works for a foreach loop
 
-$mail->Body = "<h1> hello </h1>";
+$mail->Body = '<h1>Video Games and More</h1>';
+$mail->Body = '<p>Thank you for your purchase!</p>';
+$mail->Body = '<table><thead align="left">
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>	
+        </tr>
+    </thead><tbody>';
 foreach ($cart as $item) {
-$mail->Body .= $item['product_name'].' ' . $item['product_price']. ' ' . $item['quantity'];
+$mail->Body .= '<tr><td>' . $item['product_name'].'</td>	<td>' . $item['product_price']. '</td>	<td>' . $item['quantity']. '</td></tr>';
 }
-$mail->Body .= "Thanks for shopping"; 
+$mail->Body .= '<br>You total was <tr>';
+foreach ($total as $charge) { 
+$mail->Body .= '<td>' . (round(($charge['total'] * 0.15 + $charge['total']), 2)). '</td></tr></tbody></table>';
+}
 $mail->AddAddress($email);
 
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
-    echo "You will recieve a confirmation email shortly";
+    echo '<p id="mailMessage">You will recieve a confirmation email shortly</p><br><br>';
  }
 	
 	$customer = \Stripe\Customer::create(array(
@@ -55,13 +66,12 @@ $mail->AddAddress($email);
 	
 	$amount = number_format(($amount / 100), 2);
 	
-	echo "<h1>Successfully charged $amount!</h1>";
+	echo '<h2 id="success">Successfully charged $amount!</h2>';
 ?>
-<table>
+<table id="paymentSuccess">
 </tr>
   <?php foreach ($cart as $item) { ?>
         <tr>
-			<?php $product = $item['product_name'].' ' . $item['product_price']. ' ' . $item['quantity']; ?>
                 <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
                 <td>$<?php echo $item['product_price']; ?></td>
                 <td><?php echo $item['quantity']; ?></td>

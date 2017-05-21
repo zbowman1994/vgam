@@ -29,12 +29,13 @@ $verify = login($usrEmail);
 	}
 	if (isset($_POST['login'])){
 	if (password_verify($usrPass, $hashedPass)) {
-		echo 'Yeah thats right! Welcome ' . $name;
+		echo '<p id="loginVerify">Yeah thats right! Welcome ' . $name . '</p><br><br>';
 		echo'<button type"button"><a href="cartReview.php">Proceed to payment</a></button>';
 	} else {
-		echo 'Sorry try again.';
+		echo '<p id="wrongPass">Sorry try again.</p><br><br>';
 		echo '<button type="button" id="contactus"><a href = "login.php">Back to login</a></button>';
 	}
 	}
 	?>
   </tr>
+  </table>
