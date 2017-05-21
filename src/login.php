@@ -12,13 +12,13 @@
 <br> <label id="returningCustomer">Returning Customer</label> <br>
 <form action="loginVerify.php" method="post">
     <label for="email" id="email"><b><br>Email:<br></b></label>
-<input type="text" name="email">
+<input type="email" name="email" required>
     <label for="password" id="password"><b><br>Password:<br></b></label>
-<input type="password" name="password"><br>
+<input type="password" name="password" required><br>
 <button type="submit" name="login" id="userLogin">Login</button>
 </form>
 </div> <br>
-<div id= newCustomer>
+<div id="newCustomer">
     <form action="loginVerify.php" method= "post">
         <br> <label id="newCustomers">New Customer</label> <br>
             <label for="firstname" id="firstName"><b><br>First Name:<br></b></label>
@@ -26,9 +26,9 @@
             <label for="lastname" id="lastName"><b><br>Last Name:<br></b></label>
             <input type="text" placeholder="Your Last Name.." id="lastname" name="lastname" required>      
             <label for="address" id="address"><b><br>Address:<br></b></label>
-            <input type="text" placeholder="Your Address.." id="address" name="address">
+            <input type="text" placeholder="Your Address.." id="address" name="address" required>
             <label for="email" id="email"><b><br>Email:<br></b></label>
-            <input type="text" placeholder="Your Email.." id="email" name="email" required>
+            <input type="email" placeholder="Your Email.." id="email" name="email" required>
             <label for="password" id="password"><b><br>Password:<br></b></label>
             <input type="password" placeholder="Enter new password.." id="password" name="password" required><br>
             <button type="submit" name="register" id="userlogin">Register</button>
