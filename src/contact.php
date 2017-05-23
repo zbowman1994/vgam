@@ -4,14 +4,20 @@
 
 
 <br><br>
-    <form action="contactSubmit.php" id="contact">
+    <form action="contactSubmit.php" id="contact" method="post">
 	<h2>Contact Form</h2>
         <label for="fname"></label>First Name<br>
+<<<<<<< c1d26fd4bca3e40499813c10d267b18139abfe8e
         <input type="text" id="fname" name="firstname" placeholder="Your first name.." required><br><br>
         <label for="lname"></label>Last Name<br>
         <input type="text" id="lname" name="lastname" placeholder="Your last name.." required><br><br>
 		<label for="email"></label>Your Email<br>
         <input type="email" id="email" name="email" placeholder="Your email.." required><br><br>
+=======
+        <input type="text" id="fname" name="firstname" placeholder="Your first name.." required ><br><br>
+        <label for="lname"></label>Last Name<br>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.."required ><br><br>
+>>>>>>> contact us email complete
         <label for="country">Country<br></label>
         <select id="country" name="country">
             <option value="canada">Canada</option>
