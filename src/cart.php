@@ -2,8 +2,10 @@
 session_start(); 
 require_once 'model/db_connect.php';
 require_once 'model/db_functions.php';
-$sessionId = $_SESSION['count']; 
-addProduct($sessionId, $_POST['product_id'], $_POST['quantity']);
+$sessionId = $_SESSION['count'];
+prodId = $_POST['product_id'];
+qty = $_POST['quantity']; 
+addProduct($sessionId, $prodId, $qty);
 $cart = getCart($sessionId);
 $total = getTotal($sessionId);
 ?>

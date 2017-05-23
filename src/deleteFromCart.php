@@ -5,20 +5,7 @@ $prodId = $_GET['product_id'];
 $cartId = $_GET['cart_id'];
 $name = $_GET['product_name'];
 $qty = $_GET['quantity'];
-if (isset($_GET['update'])) {
-    updateQuantity($prodId, $qty);
-	echo 'Successfully updated ' . $name;
-	
-}
-if (isset($_GET['remove'])) {
-    removeProduct($prodId, $cartId);
-	echo 'Successfully removed ' . $name;
-	
-}
-if (isset($_GET['empty'])) {
-    clearCart();
-	echo 'Cart emptied' ;
-}
+
 /*
  * This function deletes cart still need to do
  */
@@ -63,7 +50,20 @@ function updateQuantity($prodId, $qty) {
 <link rel="stylesheet" type ="text/css" href="css/style.css" >
 
 <p></p>
-<p> Success! What would you like to do now? </p>
+<p><?php if (isset($_GET['update'])) {
+    updateQuantity($prodId, $qty);
+	echo 'Successfully updated ' . $name;
+	
+}
+if (isset($_GET['remove'])) {
+    removeProduct($prodId, $cartId);
+	echo 'Successfully removed ' . $name;
+	
+}
+if (isset($_GET['empty'])) {
+    clearCart();
+	echo 'Cart emptied' ;
+} ?></p>
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "productSelection.php">Product Selection</a></button>
 

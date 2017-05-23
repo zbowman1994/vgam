@@ -6,7 +6,12 @@ require_once 'model/db_functions.php';
 $usrPass = $_POST['password'];
 $usrEmail = $_POST['email'];
 $sessionId = $_SESSION['count'];
-$customer = customer($sessionId, $_POST['firstname'],$_POST['lastname'],$_POST['address'],$_POST['email'],$_POST['password']);
+$firstName = $_POST['firstname'];
+$lastName = $_POST['lastname'];
+$address = $_POST['address'];
+$email = $_POST['email'];
+$password = $_POST['password'];
+$customer = customer($sessionId, );
 $verify = login($usrEmail);
 ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" >
@@ -18,7 +23,7 @@ $verify = login($usrEmail);
 <table align="center">
   <tr>
     <?php if (isset($_POST['register'])) {
-		echo 'Thanks for joining ' . $_POST['firstname'] . '<br>';
+		echo 'Thanks for joining ' . $firstName . '<br>';
 		echo'<button type"button"><a href="cartReview.php">Proceed to payment</a></button>';
 	}?>
 	<?php 
