@@ -2,8 +2,7 @@
 require 'view/header.html'; 
 require_once 'vendor/autoload.php';
 require_once('config.php');
-$firstName = $_POST['firstname'];
-$lastName = $_POST['lastname'];
+$fullName = $_POST['firstname'] . $_POST['lastname'];
 $email = $_POST['email'];
 $subject = $_POST['subject'];
 
@@ -17,17 +16,17 @@ $mail->Port = 465; // 465 or doesnt like 587
 $mail->IsHTML(true);
 $mail->Username = "ics199grp00@gmail.com";
 $mail->Password = "ics199vgam";
-$mail->SetFrom($email, $firstName, $lastName);
+$mail->SetFrom("ics199grp00@gmail.com");
 $mail->Subject = "Customer Question";
 //this works for a foreach loop
 
-$mail->Body = $subject;
+$mail->Body = $subject . '<br>' . $email . '<br>' . $fullName ;
 $mail->AddAddress("ics199grp00@gmail.com");
 
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
-    echo '<h2>Thank you' . $firstName . 'for reaching out. We will get back to you as soon as we can.</h2><br><br>';
+    echo '<h2>Thank you ' . $fullName . ' for reaching out. We will get back to you as soon as we can at the following address ' . $email . '.</h2><br><br>';
  }
 ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
