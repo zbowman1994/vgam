@@ -52,17 +52,17 @@ function updateQuantity($prodId, $qty) {
 <p></p>
 <p><?php if (isset($_GET['update'])) {
     updateQuantity($prodId, $qty);
-	echo 'Successfully updated ' . $name;
+	echo '<p style="font-family:Tahoma, Geneva, sans-serif; background-color: black; border: 10px solid white; width: 15%; padding: 15px 20px; display: inline-block;">Successfully updated ' . $name . '</p>';
 	
 }
 if (isset($_GET['remove'])) {
     removeProduct($prodId, $cartId);
-	echo 'Successfully removed ' . $name;
+	echo '<p style="font-family:Tahoma, Geneva, sans-serif; background-color: black; border: 10px solid white; width: 15%; padding: 15px 20px; display: inline-block;">Successfully removed ' . $name . '</p>';
 	
 }
 if (isset($_GET['empty'])) {
     clearCart();
-	echo 'Cart emptied' ;
+	echo '<p style="font-family:Tahoma, Geneva, sans-serif; background-color: black; border: 10px solid white; width: 15%; padding: 15px 20px; display: inline-block;">Cart emptied </p>' ;
 } ?></p>
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "productSelection.php">Product Selection</a></button>
