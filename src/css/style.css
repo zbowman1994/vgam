@@ -177,7 +177,7 @@ input#submitContact {
 }
 form#contact {
 	background-color: white;
-	border: 20px solid white;
+	border: 10px solid white;
 	width: 15%;
 	padding: 15px 20px;
 	display: inline-block;
