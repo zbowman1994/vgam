@@ -11,7 +11,7 @@ $products = getAllMiscItems();
 <button type="button"><a href = "getAllProducts.php">All products</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
-<button type="button"><a href = "contact.php">Contact us</a></button><br><br><br>
+<br><br><br>
 
 <table id="getAllMiscItems">
     <thead>
@@ -45,6 +45,6 @@ $products = getAllMiscItems();
 <button type="button"><a href = "cart.php">Back to cart</a></button>	
 <button type="button"><a href = "getAllProducts.php">All products</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
-<button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
+<button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button><br>
 <button type="button"><a href = "contact.php">Contact us</a></button>
 <?php require 'view/footer.php'; ?>

@@ -34,6 +34,7 @@ table {
 }
 table#total {
 	background-color: black;
+	border: 10px solid white;
 	color: white;
 	font-size: 30px;
 	font-family: Tahoma, Geneva, sans-serif;
@@ -67,8 +68,18 @@ table#getAllMiscItems {
     font-family: Tahoma, Geneva, sans-serif;
 	text-align: left;
 }
+table#verify {
+	background-color: white;
+	border: 20px solid white;
+	width: 15%;
+	padding: 15px 20px;
+	display: inline-block;
+    text-align: center;
+	background-color: black;
+}
 table#cart {
 	background-color: black;
+	border: 10px solid white;
 	color: cornflowerblue;
 	font-size: 20px;
 	font-family: Tahoma, Geneva, sans-serif;
@@ -102,18 +113,18 @@ label#email {
     font-size: 20px;
 }
 div#login{
-    
+    font-family: Tahoma, Geneva, sans-serif; 
     margin: auto;
     width: 15%;
-    border: 3px black;
+    border: 10px solid white;
     padding: 15px 20px;
     background-color: black;  
 }
 div#newCustomer {
-    
+    font-family: Tahoma, Geneva, sans-serif; 
     margin: auto;
     width: 15%;
-    border: 3px black;
+    border: 10px solid white;
     padding: 15px 20px;
     background-color: black;
 }
@@ -166,6 +177,7 @@ input#submitContact {
 }
 form#contact {
 	background-color: white;
+	border: 20px solid white;
 	width: 15%;
 	padding: 15px 20px;
 	display: inline-block;
@@ -187,8 +199,13 @@ form#thankYou {
 	border-color: cornflowerblue;
 }
 table#cartReview {
+	column-gap: 40px;
+	float: center;
+	border: 10px solid white;
+	color: cornflowerblue;
+	font-size: 30px;
+	font-family: Tahoma, Geneva, sans-serif;
 	background-color: black;
-	font-size: 20px;
 }
 p#loginVerify {
 	font-size: 20px;

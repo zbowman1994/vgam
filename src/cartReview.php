@@ -16,8 +16,15 @@ $total = getTotal($sessionId);
 <link rel="stylesheet" type ="text/css" href="css/style.css" >
 <button type="button" id="products"><a href = "cart.php">Back to cart</a></button>
 
-<br><br><br>
+<br>
 <table align="center" id="cartReview">
+    <thead>
+        <tr>
+            <th scope="col" style="padding: 10px 30px;">Name</th>
+            <th scope="col" style="padding: 10px 30px;">Price</th>
+            <th scope="col" style="padding: 10px 30px;">Quantity</th>	
+        </tr> 
+    </thead><br>
   <?php foreach ($cart as $item) { ?>
         <tr>
                 <td><?php echo $item['product_name']; ?><input type="hidden" name="product_name" value="<?php echo $item['product_name']; ?>"></td>
@@ -26,17 +33,17 @@ $total = getTotal($sessionId);
                 </tr>
         
    <?php } ?> 
-</tr>   
+</tr> 
+<table align="center" id="cartReview"> <br>
     <tr>
         <?php foreach ($total as $amount) { ?> 
 		<?php $cost = (round(($amount['total'] * 0.15 + $amount['total']), 2)); ?>
-            <td>Subtotal:  $<?php echo $amount['total']; ?></td>
-            <td>Total:  $<?php echo $cost; ?></td>
+            <td style="color:white; font-size:20px;">Subtotal:  $<?php echo $amount['total']; ?>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+            <td style="color:white; font-size:20px;">Total:  $<?php echo $cost; ?></td>
 			<?php $amount = $cost * 100; ?>
         <?php } ?>
-		</tr>
+	</tr>
 </table>
-<br>
 <br>
 
 <!--------- DONT TOUCH BELOW THIS LINE ITS FOR STRIPE ------->

@@ -16,7 +16,7 @@ $total = getTotal($sessionId);
 <button type="button" id="checkout"><a href="login.php">Checkout</a></button>
 <form action="deleteFromCart.php" method="get">
     <button type="submit" id="emptyCart"><input type="hidden" name="empty">Empty Cart</button>
-</form>
+</form><br>
 <table id="cart">
     <thead>
         <tr>
@@ -41,7 +41,7 @@ $total = getTotal($sessionId);
         </form>
     <?php } ?>  
     <table id ="total">
-	<thead>
+	<thead><br>
 	<tr>
         <?php foreach ($total as $amount) { ?>
             <td>Subtotal:  $<?php echo $amount['total']; ?>&nbsp;&nbsp;</td>

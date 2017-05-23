@@ -10,7 +10,7 @@ $products = getAllProducts();
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
 <button type="button"><a href = "getAllMiscItems.php">Misc. Items</a></button>
-
+<br><br><br>
 
 <table id="allProducts">
     <thead>
@@ -44,7 +44,8 @@ $products = getAllProducts();
 <button type="button"><a href = "cart.php">Back to cart</a></button>
 <button type="button"><a href = "getAllWiiGames.php">Wii games</a></button>
 <button type="button"><a href = "getAllPlaystationGames.php">Playstation games</a></button>
-<button type="button"><a href = "getAllMiscItems.php">Misc Items</a></button>
+<button type="button"><a href = "getAllMiscItems.php">Misc Items</a></button><br>
+<button type="button"><a href = "contact.php">Contact us</a></button>
 
 
 <?php require 'view/footer.php'; ?>
