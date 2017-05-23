@@ -11,13 +11,12 @@ $lastName = $_POST['lastname'];
 $address = $_POST['address'];
 $email = $_POST['email'];
 $password = $_POST['password'];
-$customer = customer($sessionId, );
+$customer = customer($sessionId, $firstName, $lastName, $address, $email, $password);
 $verify = login($usrEmail);
 ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" >
 <button type="button" id="products"><a href = "productSelection.php">Products</a></button>
 <button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>
-<!-- <button type="button" id="contactus"><a href = "login.php">Back to login</a></button> -->
 
 <br><br><br>
 <table align="center">
