@@ -22,11 +22,8 @@ $verify = login($usrEmail);
 <table align="center">
   <tr>
     <?php if (isset($_POST['register'])) {
-<<<<<<< HEAD
 		echo 'Thanks for joining ' . $firstName . '<br>';
-=======
 		echo '<p style="font-family:Tahoma, Geneva, sans-serif; border: 10px solid white; width: 15%; padding: 15px 20px; display: inline-block;">Thanks for joining ' . $_POST['firstname'] . '<br></p>';
->>>>>>> Formatted tables on several of the pages and moved/removed a few buttons
 		echo'<button type"button"><a href="cartReview.php">Proceed to payment</a></button>';
 	}?>
 	<?php 
