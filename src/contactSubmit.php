@@ -17,16 +17,20 @@ $mail->IsHTML(true);
 $mail->Username = "ics199grp00@gmail.com";
 $mail->Password = "ics199vgam";
 $mail->SetFrom("ics199grp00@gmail.com");
-$mail->Subject = "Customer Question";
-//this works for a foreach loop
+$mail->Subject = "Email recieved";
 
-$mail->Body = $subject . '<br>' . $email . '<br>' . $fullName ;
+$mail->Body = 'This is an automated email to confirm your message has been recieved.<br>
+Below is a copy of the information we recieved:<br><br>
+Message sent: ' . $subject . '<br><br>From: ' . $email . '<br><br>Customer name: ' . $fullName . '<br><br>
+We will get back to you shortly';
 $mail->AddAddress("ics199grp00@gmail.com");
+$mail->AddCC($email);
 
  if(!$mail->Send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
  } else {
-    echo '<h2>Thank you ' . $fullName . ' for reaching out. We will get back to you as soon as we can at the following address ' . $email . '.</h2><br><br>';
+    echo '<h2 style="background-color: black; color: cornflowerblue;">Thank you ' . $fullName . ' for reaching out.<br>
+	We will get back to you as soon as we can at the following address ' . $email . '.</h2><br><br>';
  }
 ?>
 <link rel="stylesheet" type ="text/css" href="css/style.css" > 
