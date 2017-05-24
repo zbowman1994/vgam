@@ -66,7 +66,9 @@ $mail->AddAddress($email);
 	
 	$amount = number_format(($amount / 100), 2);
 	
-	echo '<h2 id="success">Successfully charged '.$amount.'!</h2>';
+	echo '<h2 id="success">Successfully charged '.$amount.'!</h2><br><br><br><br>
+	<button type="button" id="products"><a href = "productSelection.php">Product Selection</a></button><br><br><br><br>
+	<button type="button" id="contactus"><a href = "contact.php">Contact Us</a></button>';
 ?>
 <table id="paymentSuccess">
 </tr>
