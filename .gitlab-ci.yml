@@ -54,7 +54,8 @@ before_script:
 
 stages:
   - test
-  - deploy
+  - deploy-db
+  - deploy-app
   
 static_tests:
   stage: test
@@ -88,7 +89,7 @@ static_tests:
     # - vendor/bin/phpunit --coverage-text --colors=never --whitelist src --bootstrap vendor/autoload.php --testdox tests
 
 deploy_db_to_dokku:
-  stage: deploy
+  stage: deploy-db
   tags:
     # this ensures the Camosun Runner will be used for deployment
     - deploy
@@ -107,7 +108,7 @@ deploy_db_to_dokku:
     - master
     
 deploy_app_to_dokku:
-  stage: deploy
+  stage: deploy-app
   tags:
     # this ensures the Camosun Runner will be used for deployment
     - deploy
