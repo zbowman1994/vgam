@@ -2,11 +2,11 @@
 
 | Criteria                                    | Wk 3 | Wk 4 | Wk 5 | Wk 6|
 | :-----------------------------------------: | ---- | ---- | ---- | --- |
-| Gantt Chart Updated (3 marks)               | 2.5  | 2    |  
-| Good Commit Msgs (2 marks)                  | 1.5  | 2    |   
-| Proper Branching & Merge Requests (3 marks) | 2    | 3    |
-| Issues, ToDos, Designated Work (2 marks)    | 2    | 2    |
-| **Total out of 10:**                        | 8    | 9    |
+| Gantt Chart Updated (3 marks)               | 2.5  | 2    | 3    | 
+| Good Commit Msgs (2 marks)                  | 1.5  | 2    | 2    |  
+| Proper Branching & Merge Requests (3 marks) | 2    | 3    | 3    | 
+| Issues, ToDos, Designated Work (2 marks)    | 2    | 2    | 2    |
+| **Total out of 10:**                        | 8    | 9    | 10   |
 
 ## Comments:
 ### Wk. 3:
@@ -20,3 +20,9 @@
 * Commit msgs are improved, good work.
 * Branching and merging good. Careful with branch names! Make sure they reflect what you are doing.
 * Keep up with the Issue Tracker. Use it for Ideas, Bugs, discussions, 'ToDo'
+
+### Wk. 5:
+* Gantt Chart looks good!
+* Commit msgs are good.
+* Committing directly on Master with Gantt isn't really an issue, I'll allow although some Gantt branches look abondoned?
+* Issues good!
